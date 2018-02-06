@@ -1,5 +1,6 @@
 @include('layouts.header')
 
+
 <div class="banner clearfix">
 	<ul class="bxslider">
 	  <li>
@@ -78,75 +79,51 @@
 
 <div class="info_panel clearfix">
 	<div class="container">
-		<div class="subsciber_box">
-			<div class="title"><span><img src="images/mail.png"></span>Subscribe</div>
+		<div class="sub_box">		
 			<div class="content">
-				<div class="sub_title">Need fun and free advice on love, food, health and more?</div>
-			<div class="notfc">Subscribe to our free newsletter</div>
-			<div class="checkbox">
-			    <input type="checkbox" id="chk1" name="Mind & Body" value="Mind & Body">
-			    <label for="chk1">Mind & Body</label>
-			</div>
-			<div class="checkbox">
-			    <input type="checkbox" id="chk2" name="Mind & Body" value="Mind & Body">
-			    <label for="chk2">Healthy Bytes</label>
-			</div>
-			<div class="checkbox">
-			    <input type="checkbox" id="chk3" name="Mind & Body" value="Mind & Body">
-			    <label for="chk3">Good Parenting</label>
-			</div>
-			<div class="checkbox">
-			    <input type="checkbox" id="chk4" name="Mind & Body" value="Mind & Body">
-			    <label for="chk4">Beauty Tips</label>
-			</div>
-			<div class="checkbox">
-			    <input type="checkbox" id="chk5" name="Mind & Body" value="Mind & Body">
-			    <label for="chk5">Love Tips</label>
-			</div>
-			<div class="email">
-				<input type="text" placeholder="Enter email address" name="email">
-			</div>
-			<div class="subscribe">
-				<input type="submit" value="Subscribe">
-			</div>
-			<div class="bot_text">By clicking the button above, you agree to the Terms & Conditions and Privacy Policy, and understand that you can opt out of the subscription at any time.</div>
-			</div>			
+				<div class="title">Thank you for <br class="brNone"/>Signing up!</div>
+				<div class="sub_title">You will receive your first <br class="brNone"/>newsletter with our next <br class="brNone"/>scheduled circulation!</div>
+				<div class="card">
+					<a href="#" title="click here"><img src="images/sub_card.jpg"></a>
+				</div>
+			</div>	
 		</div>
 
-		<div class="quiz_box">
+		<div class="quiz_box questions">
 			<div class="title"><span><img src="images/star.png"></span>Daily Quiz</div>
 			<div class="content">
 				<div class="sub_title">Dancing for an hour burns approximately how many calories?</div>
 				<form action="" class="quiz_form">
-				<div class="options">
-				    <input type="radio" id="rad1" name="answer" value="Mind & Body">
-				    <label for="rad1">170 calories</label>
-				</div>	
-				<div class="options">
-				    <input type="radio" id="rad2" name="answer" value="270 calories">
-				    <label for="rad2">270 calories</label>
-				</div>
-				<div class="options">
-				    <input type="radio" id="rad3" name="answer" value="370 calories">
-				    <label for="rad3">370 calories</label>
-				</div>
-				<div class="options">
-				    <input type="radio" id="rad4" name="answer" value="470 calories">
-				    <label for="rad4">470 calories</label>
-				</div>
-				<div class="subscribe q_submit">
-					<input type="submit" value="Submit">
-				</div>	
-			</form>
-				
+					<div class="options">
+					    <input type="radio" id="rad1" name="answer" value="Mind & Body">
+					    <label for="rad1">170 calories</label>
+					</div>	
+					<div class="options">
+					    <input type="radio" id="rad2" name="answer" value="270 calories">
+					    <label for="rad2">270 calories</label>
+					</div>
+					<div class="options">
+					    <input type="radio" id="rad3" name="answer" value="370 calories">
+					    <label for="rad3">370 calories</label>
+					</div>
+					<div class="options">
+					    <input type="radio" id="rad4" name="answer" value="470 calories">
+					    <label for="rad4">470 calories</label>
+					</div>
+					<div class="subscribe q_submit">
+						<input type="submit" value="Submit">
+					</div>	
+				</form>			
 			</div>	
-		</div>	
-		
+		</div>		
+
+
 		<div class="big_ed_box">
 			<a href="#" title="click here"><img src="images/big_ed.jpg"></a>
-		</div>	
-		
+		</div>
 	</div>
 </div>
+
+
 
 @include('layouts.footer')

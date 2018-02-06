@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -39,17 +39,35 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function getSignupForm()
+    {
+       
+        return view('signupform');
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+     
     protected function validator(array $data)
-    {
+    {   
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'title_name' => 'required|string|max:255',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'street_add' => 'required',
+            'apt' => 'required|string|max:255',
+            'city' => 'required|string|max:255',
+            'state' => 'required|string|max:255',
+            'zip' => 'required|string|max:255',
+            'dob_month' => 'required',
+            'dob_day' => 'required',
+            'dob_year' => 'required',
+            'email' => 'required|string|email|max:255',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -61,11 +79,35 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
+    {   
+        $mydob='2018-1-22';
+        
         return User::create([
-            'name' => $data['name'],
+            'title_name' => $data['title_name'],
+            'first_name' => $data['first_name'],
+            'last_name' => $data['last_name'],
+            'street_add' => $data['street_add'],
+            'apt' => $data['apt'],
+            'city' => $data['city'],
+            'state' => $data['state'],
+            'zip' => $data['zip'],
+            'date_of_birth' => $mydob,
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        // return User::create([
+        //     'title_name' => 'aaaa',
+        //     'first_name' => 'aaaa',
+        //     'last_name' => 'aaaa',
+        //     'street_add' => 'aaaa',
+        //     'apt' => 'aaaa',
+        //     'city' => 'aaaa',
+        //     'state' => 'aaaa',
+        //     'zip' => 'aaaa',
+        //     'date_of_birth' => $mydob,
+        //     'email' => 'aaaa',
+        //     'password' => 'aaaa',
+        // ]);
     }
 }

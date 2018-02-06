@@ -1,5 +1,6 @@
 @include('layouts.header')
 
+
 <div class="banner clearfix">
 	<ul class="bxslider">
 	  <li>
@@ -77,7 +78,7 @@
 </div>
 
 <div class="info_panel clearfix">
-	<div class="container">
+	<div class="container">		
 		<div class="subsciber_box">
 			<div class="title"><span><img src="images/mail.png"></span>Subscribe</div>
 			<div class="content">
@@ -112,41 +113,38 @@
 			<div class="bot_text">By clicking the button above, you agree to the Terms & Conditions and Privacy Policy, and understand that you can opt out of the subscription at any time.</div>
 			</div>			
 		</div>
-
-		<div class="quiz_box">
+		<div class="quiz_box questions">
 			<div class="title"><span><img src="images/star.png"></span>Daily Quiz</div>
 			<div class="content">
-				<div class="sub_title">Dancing for an hour burns approximately how many calories?</div>
-				<form action="" class="quiz_form">
-				<div class="options">
-				    <input type="radio" id="rad1" name="answer" value="Mind & Body">
-				    <label for="rad1">170 calories</label>
-				</div>	
-				<div class="options">
-				    <input type="radio" id="rad2" name="answer" value="270 calories">
-				    <label for="rad2">270 calories</label>
-				</div>
-				<div class="options">
-				    <input type="radio" id="rad3" name="answer" value="370 calories">
-				    <label for="rad3">370 calories</label>
-				</div>
-				<div class="options">
-				    <input type="radio" id="rad4" name="answer" value="470 calories">
-				    <label for="rad4">470 calories</label>
-				</div>
-				<div class="subscribe q_submit">
-					<input type="submit" value="Submit">
-				</div>	
-			</form>
-				
+				<div class="sub_title">Dancing for an hour burns approximately how many calories?</div>			
+				<div class="answers">
+						<div class="right_ans">
+							<div class="like"><img src="images/like.png"></div>
+							<div class="correct_box">
+								<div class="c_in">
+								<div class="c_title">You are correct!</div>
+								<div class="cs_title">The answer is: 470 calories</div>
+								</div>
+							</div>	
+						</div>
+						<div class="bot_text">
+							Kicking up the intensity of your dance steps can help expend more energy, which has a direct impact on the number of calories burned. At a more vigorous pace, you can expect to burn about 450 calories per hour.
+						</div>
+						<div class="subscribe">
+							<input type="submit" value="Next">
+						</div>	
+						<div class="card">
+							<a href="#" title="click here"><img src="images/card.jpg"></a>
+						</div>
+					</div>
 			</div>	
-		</div>	
-		
+		</div>		
 		<div class="big_ed_box">
 			<a href="#" title="click here"><img src="images/big_ed.jpg"></a>
-		</div>	
-		
+		</div>
 	</div>
 </div>
+
+
 
 @include('layouts.footer')

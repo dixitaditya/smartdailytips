@@ -1,0 +1,855 @@
+@charset "utf-8";
+/* CSS Document */
+/*==================================Index=======================================*/
+/*
+1. Global Settings
+2. Header
+3. Mobile navigation tab
+4. Footer
+*/
+/*=================================================================================================================================
+                                              1. Global Settings
+=================================================================================================================================*/
+*{margin:0; padding:0; -webkit-font-smoothing: subpixel-antialiased}
+a {text-decoration:none; outline:none}
+a img {border:none}
+.clear {clear:both; overflow:hidden; line-height:0; font-size:0; height:0}
+.clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear: both;height:0}
+* html .clearfix{zoom:1}
+*:first-child+html /**/ix{zoom:1}
+ul, li {list-style:none}
+.flt {float:left}
+.frt {float:right}
+.centeralign {margin:0 auto}
+header,hgroup,nav,footer,section,aside,article{display:block}
+:focus{outline:0; border:0}
+input[type=submit]:focus, input[type=submit]:active{outline:0}
+input {border:none; outline:none}
+.block{display:block !important}
+.none {display: none !important}
+.stopScroll{overflow:hidden}
+::-moz-selection{color:#fff;text-shadow:none;background:#915e8a}
+::selection{color:#fff;text-shadow:none;background:#915e8a}
+.posReln {position: relative}
+.ovfh {overflow: hidden !important;}
+.container{width: 1170px;margin: 0 auto;}
+.mg0{margin: 0!important;}
+body{-webkit-text-size-adjust:100%}
+.text-center{text-align: center;}
+/*=================================================================================================================================
+                            2. Header
+=================================================================================================================================*/
+body {font-family:'Lato', sans-serif; background:#fff; color:#7696a8; font-size:13px;height: 100%}
+
+header {width:100%; transition:all 250ms linear, height 150ms linear}
+.headerTop {padding:12px 0; transition:all 150ms linear; width:1170px; margin:0 auto}
+.headerTop .logo {float:left; padding-top: 5px}
+.headerTop h1 a { position:relative; display:block}
+.headerTop h1 img {transition:all 150ms linear}
+.headerRht {float: right}
+.signIn {color: #122a5e; font-size: 15px; margin-right:20px; line-height:46px; display: block; float: left;}
+.headerRht .subscribe {color: #fff; font-size: 18px; background: #ff7400; height: 46px; line-height: 46px; border-radius: 5px; 
+  display: block; width:144px; text-align: center; float: right; font-weight: 700;}
+a:hover.signIn, .headerRht a:hover.subscribe {text-decoration: underline;}
+
+.searchBox {float: right; background: #353b4d; width: 250px; height: 50px}
+.searchBox .search {padding:15px 0 15px 30px; color: #bbb; font-family:'Lato', arial; font-size: 13px; 
+background: none; width: 170px; float: left; line-height: 20px  }
+.searchBox .button {width:43px; float: right; cursor: pointer; height: 50px;
+  background:url(../images/searchIco.jpg) center center no-repeat }
+.searchBox .search::placeholder{color: #bbbbbb;opacity: 1;}
+.searchBox .search:-ms-input-placeholder{color: #bbbbbb;}  
+.searchBox .search::-ms-input-placeholder{color: #bbbbbb;}
+nav {background:#1e2539; width:100%; margin: 0 auto; height: 50px }
+.navIn {width:1170px; margin:0 auto}
+#nav {padding: 13px 0; float: left;}
+#nav li {position:relative; float:left; border-left: 1px solid #394051}
+#nav li a {color:#fff; font-family:'Lato', sans-serif; font-size: 13px; height:24px; line-height: 24px; 
+padding: 0 40px; transition-duration: 1s; transition-timing-function: linear; display: block}
+#nav li a:hover {color: #ff7400}
+#nav li:first-child {border-left:0}
+#nav li:first-child a {padding-left:0;}
+/*=================================================================================================================================
+                            3.Mobile navigation tab
+=================================================================================================================================*/
+#nav-toggle { cursor: pointer; z-index: 2; position: absolute; right: 12px; top: 33px; height:14px; width: 30px}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {cursor: pointer; border-radius: 1px; height: 5px; 
+  width: 30px;  background: #1e2539 ;  position: absolute;  display: block; border-radius: 2px;  content: ''}
+#nav-toggle span:before {top: -9px}
+#nav-toggle span:after {bottom: -9px}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {transition: all 500ms ease-in-out}
+#nav-toggle.active span {background-color: transparent; position: fixed;}
+#nav-toggle.active span:before, #nav-toggle.active span:after {top: 0}
+#nav-toggle.active span:before {transform: rotate(45deg); -moz-transform: rotate(45deg); 
+  -webkit-transform: rotate(45deg); 
+-o-transform: rotate(45deg); -ms-transform: rotate(45deg)}
+#nav-toggle.active span:after {transform: rotate(-45deg); -moz-transform: rotate(-45deg); 
+  -webkit-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg)}
+#nav-toggle {display: none; height: 30px}
+.mobNav{background:#fff; position: fixed; width:230px; right: -105%; padding: 64px 0 0 ;  z-index: 1; top:0;
+  height: 100%; box-shadow:-3px 0 4px -4px #000; color: #e23f04; transition: width 1s linear, height 1s linear; 
+  z-index: 1  }
+.mobNav a {display: block; color: #000; text-align: right; padding: 15px 25px 15px 0; 
+  border-top: 1px solid #cdced0; transition-duration: 1s; transition-timing-function: linear; 
+  font-family: 'Open Sans', sans-serif; font-size: 14px;}
+.mobNav a:hover {color: #e23f04;}
+#menu_overlay {background: #000 none repeat scroll 0 0;  height: 100%; left: 0; opacity: 0.5; position: fixed; top: 0; width: 100%; 
+  z-index: 0;}
+.mobNav {display: none;}
+.ovrblockWrap{display:none}
+.ovrblock{display:none}
+.ovrnone{display:none}
+.mobNav .searchwrap {overflow: hidden; background: #353b4d}
+.mobNav .search {padding:15px 0 15px 15px; color: #bbb; font-family:'Lato', arial; font-size: 13px; 
+background: none; width: 170px; float: left; line-height: 20px  }
+.mobNav .button {width:43px; float: right; cursor: pointer;
+height: 50px; background:url(../images/searchIco.jpg) center center no-repeat }
+/*============= Common CSS ===============*/
+
+.catBlue{background: #4589f8}
+.catGreen{background: #00b13f}
+.catYellow{background: #e9b61c}
+.catTorquise{background: #1bb5c4}
+
+.borderBot{border-bottom: 1px solid #e0e1e0; height: 1px}
+
+/*============= Breadcumb Start ===============*/
+  .breadCumbs{margin: 15px 0}
+  .breadCumbs ul li{display: inline-block; margin-left: 15px; background: url(../images/breadcrumbImg.png) no-repeat center; min-width: 10px; height: 20px; vertical-align: middle}
+  .breadCumbs ul li:first-child{margin-left: 0}
+  .breadCumbs ul li a{padding: 4px 6px; color: #ff7400;  font-size: 11px;  font-weight: 400;  background: #f4f2f2;  border-radius: 10px;  min-width: 50px;  display: inline-block; text-align: center; font-family: 'Lato', sans-serif;}
+  .breadCumbs ul li.liElement{padding: 4px 6px; color: #ffffff;  font-size: 11px;  font-weight: 400;  background: #9e9e9e;  border-radius: 10px;  min-width: 50px;  display: inline-block; text-align: center; font-family: 'Lato', sans-serif; height: auto}
+/*============= Breadcumb Ends ===============*/
+
+/*============= Pagination Start ===============*/
+.paginationWrap span, .paginationWrap a{width: 28px; height: 28px; line-height: 28px; border: 1px solid #c2c2c2; text-align: center; margin-left: 10px; font-size: 14px; font-family: 'Lato', sans-serif; font-weight: 700; color: #545454; float: left}
+.paginationWrap a:first-child{margin-left: 0}
+.paginationWrap span.current{color: #ff7400}
+.paginationWrap a.prev{background: url(../images/paginationPrevImg.png) no-repeat center}
+.paginationWrap a.prev.inactive{background: url(../images/paginationPrevInactiveImg.png) no-repeat center}
+.paginationWrap a.next{background: url(../images/paginationNextImg.png) no-repeat center}
+.paginationWrap a.next.inactive{background: url(../images/paginationNextInactiveImg.png) no-repeat center}
+.paginationWrap .pageTxt{color: #545454; font-size: 14px; font-family: 'Lato', sans-serif; font-weight: 400; margin-bottom: 10px}
+/*============= Pagination Ends ===============*/
+
+
+/*============= Category Page Start ===============*/
+  /*Common*/
+  .categoryPage .header{background: #1e2539; border-radius: 10px 10px 0 0; padding: 4px 10px 6px; word-wrap: break-word; font-size: 16px; font-weight: 700; font-family: 'Lato', sans-serif; color: #ffffff; line-height: 20px}
+  .categoryPage .catBlockWrap{text-align: left}
+  .categoryPage .catBlockWrap a{display: inline-block; font-size: 12px; font-family: 'Lato', sans-serif; font-weight: 400; text-transform: uppercase; color: #ffffff; padding: 3px 8px; width: 100px;text-align: center;}
+  .categoryPage .bannerOverlay {height:100%; background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.06) 44%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.06) 44%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.06) 44%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */}
+  /*Common*/
+
+  /*Horizontal Block*/
+  .categoryPage .horizontalBlock .imgWrap{margin-right: 10px}
+  .categoryPage .horizontalBlock .title{color: #282828; font-size: 14px; font-family: 'Lato', sans-serif; font-weight: 700; word-wrap: break-word}
+  .categoryPage .horizontalBlock .title a{color: #282828; font-size: 14px; font-family: 'Lato', sans-serif; font-weight: 700; word-wrap: break-word}  
+  .categoryPage .horizontalBlock .readMoreWrap{margin-top: 20px}
+  .categoryPage .horizontalBlock .readMoreWrap a{color: #ff7400; font-size: 13px; font-weight: 700; font-family: 'Lato', sans-serif; background: url(../images/moreImg.png) no-repeat right center;padding: 3px 14px 3px 0}
+  /*Horizontal Block*/
+
+  /*Vertical Block*/
+  .categoryPage .verticalBlock{position: relative}
+  .categoryPage .verticalBlock .catBlockWrap{position: absolute; top: 10px; left: 10px}
+  .categoryPage .verticalBlock .title{color: #282828; font-size: 16px; font-family: 'Lato', sans-serif; font-weight: 700; word-wrap: break-word; padding: 10px 0;}
+  .categoryPage .verticalBlock .title a{color: #282828; font-size: 16px; font-family: 'Lato', sans-serif; font-weight: 700; word-wrap: break-word}
+  .categoryPage .verticalBlock .desc{color: #868686; font-size: 14px;font-family: 'Lato', sans-serif; line-height: 19px}
+  .categoryPage .verticalBlock .readMoreWrap{margin-top: 20px}
+  .categoryPage .verticalBlock .readMoreWrap a{color: #ff7400; font-size: 13px; font-weight: 700; font-family: 'Lato', sans-serif; background: url(../images/moreImg.png) no-repeat right center;padding: 3px 14px 3px 0}
+  /*Vertical Block*/
+
+
+  /*Image Overlay Block*/
+  .categoryPage .imgBlock .descWrap{position: absolute; top: 10px; left: 10px}
+  .categoryPage .imgBlock .title{color: #ffffff; font-size: 16px; font-family: 'Lato', sans-serif; font-weight: 700; word-wrap: break-word; padding-top: 90px; padding-right: 10px}
+  .categoryPage .imgBlock .title a{color: #ffffff; font-size: 16px; font-family: 'Lato', sans-serif; font-weight: 700; word-wrap: break-word} 
+  /*Image Overlay Block*/
+
+
+  .categoryPage .leftContent{width: 850px; margin-right: 20px}
+
+  /*Popular Posts Block*/
+  .categoryPage .popularPosts{width: 270px; margin-right: 20px}
+  .categoryPage .innerPosts{border:1px solid #c2c2c2; padding: 14px 9px 9px}
+  .categoryPage .innerPosts .horizontalBlock{margin-top: 10px}
+  .categoryPage .innerPosts .horizontalBlock:first-child{margin-top: 0px}
+  .categoryPage .innerPosts .horizontalBlock .imgWrap{width: 75px; height: 65px}
+  .categoryPage .innerPosts .horizontalBlock .descWrap{width: 165px}
+  /*Popular Posts Block*/
+
+  /*Slider Block*/
+  .categoryPage .topPostSlider{width: 560px}
+  .categoryPage .topPostSlider .imgBlock .imgWrap{width: 560px; height: 270px}
+  .categoryPage .topPostSlider .imgBlock .title{padding-top:180px; font-size: 20px}
+  .categoryPage .topPostSlider .imgBlock .title a{font-size: 20px}
+  .categoryPage .bx-wrapper{box-shadow: none; border: 0; margin-bottom: 0}
+  .categoryPage .bx-wrapper .bx-controls-direction a{width: 28px; height: 28px; border: 1px solid #ddd8da; margin-top: -14px}
+  .categoryPage .bx-wrapper .bx-next{background: rgba(255, 255, 255, 0.5) url(../images/nextImg.png) no-repeat center}
+  .categoryPage .bx-wrapper .bx-prev{background: rgba(255, 255, 255, 0.5) url(../images/prevImg.png) no-repeat center}
+  /*Slider Block*/
+
+  /*Bottom Three Posts Block*/
+  .categoryPage .botPost .imgBlock{margin-left: 20px; position: relative; margin-top: 20px}
+  .categoryPage .botPost .imgBlock:first-child{margin-left: 0}
+  .categoryPage .botPost .imgBlock .imgWrap{width: 270px; height: 170px}
+  /*Bottom Three Posts Block*/
+
+  /*Trending Posts Block*/
+  .categoryPage .trendingPosts{margin-top: 20px}
+  .categoryPage .postsWrap{margin-top: 10px}
+  .categoryPage .trendingPosts .verticalBlock{margin-left: 20px; width: 415px; margin-bottom: 15px}
+  .categoryPage .trendingPosts .verticalBlock:first-child{margin-left: 0}
+  .categoryPage .trendingPosts .verticalBlock .imgWrap{width: 415px; height: 150px}
+  .categoryPage .trendingPosts .horizontalBlock{margin-right: 20px; width: 415px; margin-top: 20px}
+  .categoryPage .trendingPosts .horizontalBlock:nth-child(2n){margin-right: 0}
+  .categoryPage .trendingPosts .horizontalBlock .title{padding: 5px 0 0}
+  .categoryPage .trendingPosts .horizontalBlock .imgWrap{width: 95px; height: 95px}
+  .categoryPage .trendingPosts .horizontalBlock .descWrap{width: 255px}
+  /*Trending Posts Block*/
+
+
+  .categoryPage .rightContent{width: 300px}
+
+  /*Related Articles Block*/
+  .categoryPage .relatedArticles{border: 1px solid #d0d0d0; padding: 40px 10px 55px; background: #f7f7f7; margin-bottom: 20px}
+  /*Related Articles Block*/
+/*============= Category Page Ends ===============*/
+
+/*============= Article Page Start ===============*/
+  /*Common*/
+  .articlePage .catBlockWrap{text-align: left}
+  .articlePage .catBlockWrap a{display: inline-block; font-size: 12px; font-family: 'Lato', sans-serif; font-weight: 400; text-transform: uppercase; color: #ffffff; padding: 3px 8px; width: 100px;text-align: center;}
+  /*Common*/
+
+  .articlePage .leftBlock, .articlePage .rightBlock{width: 300px}
+  .articlePage .articleContent{width: 530px; margin: 0 20px}
+
+  /*Article Top Content*/
+  .articlePage .articleTitle{font-family: 'Lato', sans-serif; font-weight: 900; font-size: 28px; padding: 20px 0 10px}
+  .articlePage .articleRatings{margin-bottom: 45px}
+  .articlePage .ratingsTxt{color:#282828; font-size: 12px; font-weight: 400; font-family: 'Lato', sans-serif}
+  .articlePage .socialWrap{margin-bottom: 20px}
+  .articlePage .printMailWrap a{width: 26px; height: 26px; border-radius: 50%; border:1px solid #c3c3c3; display: inline-block; text-align: center; line-height: 26px; margin-left: 7px}
+  .articlePage .printMailWrap a:first-child{margin-left: 0}
+  /*Article Top Content*/
+
+  /*Article Content*/
+  .articlePage .articleTxt{margin-top: 12px; margin-bottom: 35px}
+  .articlePage .articleTxt p{color:#1a1a1a; font-family: 'Lato', sans-serif; font-weight: 400; font-size: 16px; line-height: 25px; padding: 15px 0}
+  /*Article Content*/
+
+  /*Article Pagination*/
+  .articlePage .paginationWrap{margin-top: 70px; margin-bottom: 20px}
+  /*Article Pagination*/
+
+  /*Sign Up Block*/
+  .articlePage .rightBlock .signUpBlock{margin-bottom: 24px}
+  /*Sign Up Block*/
+
+  /*Left Top Block*/
+  .articlePage .leftBlock .topBlock{margin-bottom: 20px}
+  /*Left Top Block*/
+/*============= Article Page Ends ===============*/
+/*=================================================================================================================================
+                            4. footer
+=================================================================================================================================*/
+footer {background:#1e2539; width: 100%; height: 48px; margin-top:40px;}
+.footerInn {width: 1170px; margin: 0 auto}
+.footLinks {padding: 16px 0; text-align: center;}
+.footLinks a {color: #646771; font-size: 14px; transition-duration: 1s; margin: 0 30px;
+transition-timing-function: linear}
+.footLinks a:hover {color: #ff7400}
+/*******Home page css *****/
+.top_ad{text-align: center;background: #e0e1e0;padding: 10px 0;}
+.top_ad img{display: block;margin: 0 auto}
+.banner{border-bottom: solid 70px #1e2539;}
+.banner ul li img{width: 100%;height: 580px;}
+.banner .bx-wrapper{border: 0;margin-bottom: 0}
+.banner ul li .tab{background: rgba(152,88,20,0.3);padding: 20px;width: 535px;text-align: center;float:right;margin:80px 100px 0 0}
+.banner ul li .tab_wrap{border: solid 1px #fff;padding: 0 25px}
+.banner ul li .tab_wrap .head{font-family: lora;font-style: italic;font-size: 60px;color: #ffffff;padding: 20px 0 5px;}
+.banner ul li .tab_wrap .sub_head{font-family: Montserrat;font-size: 20px;color: #ffdfc1;padding: 20px 0;border-top: solid 1px #fff;}
+
+.slide1{height: 500px;background: url('../images/slider.jpg') no-repeat top left;background-size: cover;}
+.category .cat_title{font-size: 12px;line-height: 16px;color: #fff;background: #1bb5c4;padding: 10px 15px;text-transform: uppercase;display: inline-block;float: left;}
+.category .l_blue_label{background: #1bb5c4;}
+.category .green_label{background: #00b13f;}
+.category .yellow_label{background: #e9b61c;}
+.category .blue_label{background: #4589f8;}
+.category .red_label{background: #fa3740;}
+
+.category{margin-top: -141px;}
+.category .cat_box{border-radius: 5px;width: 218px;float: left;margin: 0 18px 0 0;list-style-type: none;position: relative;}
+.category .cat_img img{display: block;border-top-left-radius: 5px;border-top-right-radius: 5px;height: auto!important;}
+.category .cat_wrap{position: absolute;bottom: -50px;clear: both;width: 100%;}
+
+.category .cat_desc{font-size: 16px;line-height: 20px;color: #222;background: #edf8ff;font-weight: 700;padding: 15px 18px;display: block;clear: both;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px; word-break: break-all;}
+
+.info_panel{margin: 60px 0 0;}
+.subsciber_box{width: 278px;border-radius: 5px;float: left;margin: 0 20px 0 0;}
+.subsciber_box .title{background: #1e2539;color: #fff;font-size: 18px;line-height: 22px;padding: 12px 20px;font-weight: 700;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+.subsciber_box .title img{padding: 3px 20px 0 0;float: left;}
+.subsciber_box .content{background: #eff2f3;padding: 25px 15px 15px;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;}
+.subsciber_box .sub_title{font-weight: 700;color: #282828;font-size: 20px;line-height: 24px;padding: 0 10px}
+.subsciber_box .notfc{color: #21a2f0;font-size: 14px;line-height: 18px;padding: 10px 10px 20px}
+.subsciber_box .checkbox label{color: #777878;font-size: 14px;line-height: 18px;padding-left: 27px;color: #717679}
+.subsciber_box .checkbox{margin-bottom: 8px;padding: 0 25px;}
+.subsciber_box .checkbox input[type=checkbox]{display: none;}
+.subsciber_box .checkbox input[type=checkbox]:not(old){width: 20px;color:#000;padding: 7px 10px; margin: 0; padding: 0; opacity:0; }
+.subsciber_box .checkbox input[type=checkbox]:not(old) + label{display:inline-block;vertical-align: middle; background:url('../images/unchk.png') no-repeat left center;text-align: left; width: 100%;line-height: 20px}
+.subsciber_box .checkbox input[type=checkbox]:not(old):checked + label{background:url('../images/checkboxicon.png') no-repeat left center;width: 100%;text-align: left;line-height: 20px }
+.subsciber_box .email input{width: 228px;height: 40px;border-radius: 5px;border: solid 1px #6b6b6b;padding: 0 10px;margin: 25px 0 25px;}
+.subsciber_box .subscribe input{background: #ff7400;color: #ffffff;font-size: 17px;line-height: 21px;text-align: center;border: solid 1px #ff5a00;width: 168px;padding: 14px 0;border-radius: 5px;margin: 0 auto 10px;display: block;cursor: pointer;font-weight: 700;}
+.subsciber_box .bot_text{color: #acacac;font-size: 12px;line-height: 16px;text-align: center;}
+
+
+
+.quiz_box{width: 278px;border-radius: 5px;float: left;margin: 0 20px 0 0;}
+.quiz_box .title{background: #1e2539;color: #fff;font-size: 18px;line-height: 22px;padding: 12px 20px;font-weight: 700;border-top-left-radius: 5px;border-top-right-radius: 5px;}
+.quiz_box .title img{padding: 1px 20px 0 0;float: left;}
+.quiz_box .content{background: #ffffff;padding: 25px 10px 10px;border: solid 1px #acacac;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;}
+.quiz_box .sub_title{font-weight: 400;color: #414141;font-size: 24px;line-height: 28px;padding: 0 10px 10px;margin: 0 0 15px;}
+.quiz_box .notfc{color: #21a2f0;font-size: 14px;line-height: 18px;padding: 20px 10px 10px}
+.quiz_box .checkbox label{color: #777878;font-size: 14px;line-height: 18px;}
+.quiz_box .checkbox{margin-bottom: 10px;padding: 0 25px;}
+.quiz_box .email input{width: 228px;height: 40px;border-radius: 5px;border: solid 1px #6b6b6b;padding: 0 10px;margin: 35px 0 25px;}
+.quiz_box .subscribe input{background: #ff7400 url('../images/ar.png') no-repeat 82% center;color: #ffffff;font-size: 16px;line-height: 18px;text-align: left;border: solid 1px #ff5a00;width: 108px;padding: 7px 35px;border-radius: 5px;margin: 0 auto 10px;display: block;cursor: pointer;}
+.quiz_box .bot_text{color: #acacac;font-size: 12px;line-height: 16px;text-align: left;margin: 10px 0 5px;}
+
+.quiz_box .correct_box{text-align: center;background: #edf8ff;padding: 7px;border-radius: 7px;position: relative;z-index: 1;margin-top: -20px;}
+.quiz_box .c_in{border-radius: 7px;border:solid 1px #d0eafb;}
+.quiz_box .c_title{color: #00b13f;font-size: 18px;line-height: 22px;font-weight: 700;padding-top: 20px;}
+.quiz_box .cs_title{color: #282828;font-size: 14px;line-height: 18px;font-weight: 700;padding: 10px 0 5px;}
+.quiz_box .like{width: 40px;height: 40px;border-radius: 40px;background: #00b13f;position: relative;z-index: 2;margin: 0 auto}
+.quiz_box .like img{padding: 10px 12px;}
+.quiz_box .quiz_form{padding: 20px 0 0;}
+.quiz_box .incorrect_box{text-align: center;background: #edf8ff;padding: 7px;border-radius: 7px;position: relative;z-index: 1;margin-top: -20px;}
+.quiz_box .inc_in{border-radius: 7px;border:solid 1px #d0eafb;}
+.quiz_box .inc_title{color: #b11a1a;font-size: 18px;line-height: 22px;font-weight: 700;padding-top: 20px;}
+.quiz_box .incs_title{color: #282828;font-size: 14px;line-height: 18px;font-weight: 700;padding: 10px 0 5px;}
+.quiz_box .dislike{width: 40px;height: 40px;border-radius: 40px;background: #b11a1a;position: relative;z-index: 2;margin: 0 auto}
+.quiz_box .dislike img{padding: 10px 12px;}
+
+
+/**** quiz page***/
+.quiz_box .q_submit.subscribe input{background: #ff7400;color: #ffffff;font-size: 17px;line-height: 21px;text-align: center;border: solid 1px #ff5a00;width: 168px;padding: 14px 0;border-radius: 5px;margin: 0 auto 10px;display: block;cursor: pointer;font-weight: 700;-webkit-appearance:none;}
+.quiz_box .q_submit{margin-top: 35px;}
+.big_ed_box{float: left;}
+
+.quiz_box .quiz_form .options label{color: #717679;font-size: 14px;line-height: 18px;padding-left: 35px; word-break: break-all;}
+.quiz_box .quiz_form .options{background: #edf8ff;padding: 15px 25px;border-radius: 5px;margin-bottom: 15px;}
+.quiz_box .quiz_form .options input[type=radio]{display: none;}
+.quiz_box .quiz_form .options input[type=radio]:not(old){width: 20px;color:#000;padding: 7px 10px; margin: 0; padding: 0; opacity:0; }
+.quiz_box .quiz_form .options input[type=radio]:not(old) + label{display:inline-block;vertical-align: middle; background:url('../images/rad_unchk.png') no-repeat left center;text-align: left; width: auto;line-height: 20px}
+.quiz_box .quiz_form .options input[type=radio]:not(old):checked + label{background:url('../images/rad_chk.png') no-repeat left center;width: auto;text-align: left;line-height: 20px }
+.banner .bx-wrapper .bx-prev {background: rgba(200,203,204,0.6) url(../images/sl_lar.png) no-repeat center!important;left: 30px;z-index: 0!important;border:solid 1px #efeeef;}
+.banner .bx-wrapper .bx-next {background: rgba(200,203,204,0.6) url(../images/sl_rar.png) no-repeat center!important;right: 30px;z-index: 0!important;border:solid 1px #efeeef;}
+
+.sub_box{background: #1e2539 url('../images/sub_bg.jpg') no-repeat top center;width: 278px;text-align: center;border-radius: 5px;float: left;margin-right:20px;}
+.sub_box .title{font-size: 30px;line-height: 34px;color: #fff;font-weight: 700;padding: 60px 0 25px;}
+.sub_box .sub_title{font-size: 14px;line-height: 18px;color: #0196f0;}
+.sub_box .card{padding: 50px 0 40px;}
+.questions.quiz_box .sub_title{margin: 0}     
+.questions.quiz_box .cs_title, .questions.quiz_box .incs_title{padding: 5px 0 2px}    
+.questions.quiz_box .c_title, .questions.quiz_box .inc_title{padding-top: 10px;}    
+.questions.quiz_box .content{padding: 10px 10px 6px}    
+.mn_qstn.quiz_box .sub_title{padding: 30px 10px 10px}
+/*=================================================================================================================================
+                            7. SignIn
+=================================================================================================================================*/
+.signInPgWrap{background: rgba(0,0,0,0.5);}
+.signInWrap {width:435px; border-radius: 5px; background: #fff; margin: 50px auto 0;font-family:'Lato', arial;position: relative;}
+.signInWrap .signHead {height:60px; line-height: 60px; padding:0 0 0 30px; color: #fff; font-size:18px; font-weight: 700;
+background: #1e2539; border-radius: 5px 5px 0 0 }
+.signInWrap .signCont {padding:32px 60px 10px}
+.signInWrap .signCont .inputBox {background: #f0f3f4; border-radius: 4px; border:1px solid #e6e6e6; padding: 9px 10px 9px 35px; 
+  line-height: 30px; height: 30px; color: #a9b2b7; font-size:14px; width: 271px; margin-bottom:20px}
+  .signCont .inputBox:focus{border: 1px solid #1e2539}
+.signInWrap .signCont .sEmal {background: #f0f3f4 url(../images/usericon.png) 4% center no-repeat;}
+.signInWrap .signCont .sPwd {background: #f0f3f4 url(../images/forgotlockicon.png) 4% center no-repeat;}
+.signInWrap .signinCheckbox{float: left;}
+.signInWrap .signinCheckbox input[type=checkbox]{display: none;}
+.signInWrap .signinCheckbox input[type=checkbox]:not(old){width: 20px;color:#000;padding: 7px 10px; margin: 0; padding: 0; opacity:0; }
+.signInWrap .signinCheckbox input[type=checkbox]:not(old) + label{display:inline-block;vertical-align: middle; background:url('../images/unchk.png') no-repeat left center;text-align: left; line-height  : 20px; color: #000;width: 100%;}
+.signInWrap .signinCheckbox input[type=checkbox]:not(old):checked + label{background:url('../images/checkboxicon.png') no-repeat left center;width: 100%;text-align: left;line-height: 20px }
+.signInWrap .forgotlink {text-align: right;float: right}
+.signInWrap .forgotlink a{color:#0196f0;font-size: 14px; }
+.signInWrap .signinbtnwrap{text-align: center;margin:20px auto 0;clear: both}
+.signInWrap .signinBtn{background: #ff7400;border:1px solid #ff5a00;border-radius: 5px;color: #fff;font-size:17px;outline: none;font-weight: 700;-webkit-appearance: none;-moz-appearance: none;appearance:none;width: 168px;height: 48px;text-align: center; cursor: pointer; }
+.signInWrap .signupbtnwrap a{text-align: center;color:#0196f0;font-size: 16px;text-align: center;}
+.signInWrap .privacytextwrap a{color: #717679;text-transform: capitalize;text-decoration: underline;text-align: center;font-size: 12px}
+.signInWrap .signupbtnwrap a:hover, .forgotlink a:hover{text-decoration: underline;}
+.signInWrap .privacytextwrap a:hover, .backbtnWrap a:hover{text-decoration: none}
+.signInWrap .signupbtnwrap, .signInWrap .privacytextwrap{text-align: center;padding-top: 15px}
+.signInWrap .signinnote {padding-left: 27px;font-size: 12px;color: #717679}
+.signInWrap .closebtnWrap {text-align: right;position: absolute;right: -20px;top: -20px;}
+.signInWrap .closebtnWrap a{outline: none;border: 0;text-decoration: none}
+/*=================================================================================================================================
+                            8. Forgot Password
+=================================================================================================================================*/
+.signInWrap .forgotmailtxt{color: #1e2539;font-size: 18px;line-height: 22px;text-align: center;padding:0px 0 20px;}
+.signInWrap .signinbtnEnterWrap{text-align: center;margin:0 auto;clear: both}
+.signInWrap .backbtnWrap{text-align: center;padding-top: 15px}
+.signInWrap .backbtnWrap a{color: #858585;font-size: 14px;text-decoration: underline;}
+.signInWrap .forgothelpWrap{background:url('../images/forgotpwdbg.png') no-repeat center bottom;padding-bottom: 70px}
+/*=================================================================================================================================
+                            9. SignUp
+=================================================================================================================================*/
+.signupform-wrapper{
+  background: url("../images/signupbg.jpg") no-repeat;
+  background-size: cover;
+  min-height: 250px;
+}
+.sweep-wrapper{
+  background: url("../images/sweepbg.jpg") no-repeat;
+}
+.main-signup-form{
+  width: 775px;
+  margin:-240px auto 100px auto;
+}
+.signupform-title{
+  padding:60px 0px 40px 0px;
+  font-family: 'Lato',Arial,sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 26px;
+  text-align: center;
+}
+.sweep-form .signupform-title{
+  color: #1e2539;
+}
+.main-signup-form .signup-form-inner{
+  background: #ffffff;
+  padding:20px 0px 20px 25px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 2px #cccccc;
+}
+.signup-step .step-no{
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  float:left;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border:1px solid #333333;
+}
+.signup-step .step-title{
+  color: #2c2c2c;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 20px;
+  padding-top:5px;
+  float:left;
+}
+.fieldset33 {width: 30%}
+.fieldset50 {width: 47%}
+.w-20 {width: 20%}
+.w-37 {width: 35%}
+.signup-select {width: 100%}
+.signup-fieldset {margin-right: 20px}
+.signup-step{
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 15px;
+}
+.signup-inputBox{width: 95%;}
+.signup-row{
+  margin:15px 0px;
+}
+.signup-fieldset{
+  border:none;
+  margin-right: 20px;
+  float:left;
+}
+.mg-right-0 {margin-right: 0px}
+.signup-fieldset .signup-label{
+  display: block;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #323232;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.signup-fieldset .signup-inputBox{
+  background: #f0f3f4;
+  border-radius: 4px;
+  border:1px solid #e6e6e6;
+  padding:6px 5px;   
+  height: 20px;
+  line-height: 20px;
+  color: #a9b2b7;
+  font-size:14px;
+}
+.signup-fieldset .signup-inputBox:focus,.signup-fieldset .signup-select:focus {
+  border-color: #1e2539;
+}
+.mt40{
+  margin-top: 40px;
+}
+.signup-checkbox{float: left;}
+input[type=checkbox].signup-checkbox{display: none;}
+input[type=checkbox].signup-checkbox:not(old){width: 20px;color:#717679;padding: 7px 10px; margin: 0; padding: 0; opacity:0; }
+input[type=checkbox].signup-checkbox:not(old) + label{display:inline-block;vertical-align: middle; background:url('../images/uncheckbox.png') no-repeat left top;text-align: left; line-height  : 16px; color: #717679; font-size: 12px;width: 50%;}
+input[type=checkbox].signup-checkbox:not(old):checked + label{background:url('../images/checkboxicon.png') no-repeat left top;text-align: left;line-height: 16px; width: 50%; }
+.signupbtn{
+  background: #ff7400; 
+  display: block;
+  width: 375px;
+  margin:30px auto;
+  padding:20px 0px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: 'Lato',Arial, sans-serif;
+  font-weight: bold;
+}
+.signup-disclaimer{
+  text-align: center;
+  width: 50%;
+  margin:25px auto 0px auto;
+  font-size: 12px;
+}
+.signup-disclaimer a{
+  color: #0078ff;
+  text-decoration: underline;
+}
+.turq{
+  color: #56c7ab;
+  border-color: #56c7ab !important;
+}
+.yellow{
+  color: #f1a53a;
+  border-color: #f1a53a !important;
+}
+.signupcheck-label{
+  float:left;
+  padding-left: 27px;
+  max-width: 100%;
+}
+.signup-select{
+  padding:5px;
+  background:#f0f3f4 url('../images/selectbg.jpg') no-repeat top right;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  line-height: 22px;
+  min-width:100px;
+  border-radius: 4px;
+  border:1px solid #e6e6e6;
+  color: #9e9e9e;
+}
+.signup-select option:not(:first-of-type) {color: #000000;font-weight: bold}
+.signup-fieldset .bginput_email{
+  background: #f0f3f4 url('../images/usericon.png') no-repeat 10px center;
+  padding-left:30px;
+  width: 80%;
+}
+.signup-fieldset .bginput_password{
+  background: #f0f3f4 url('../images/forgotlockicon.png') no-repeat 10px center;
+  padding-left:30px;
+  width: 80%;
+}
+/*****modal css******/
+.modal {display: none; position: fixed; z-index: 9999; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.5); }
+/* Modal Content */
+.modal-content {margin: auto;width: fit-content}
+/* The Close Button */
+.close {color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; }
+.close:hover, .close:focus {color: #000; text-decoration: none; cursor: pointer; }
+.forgotPass{min-height: 395px;}
+.fpstep2{display: none;}
+/*=================================================================================================================================
+                            Subscribe home Flow
+=================================================================================================================================*/
+.subscribeWrap {width:475px; border-radius: 5px; background: #fff url(../images/topImg.png) 0 0 no-repeat; margin: 50px auto 0;position: relative;}
+.subscribeWrapnobg{background:#fff !important;}
+.subscribeWrap .subsHead {height:60px; line-height: 60px; padding:6px 0 0 30px}
+.subscribeWrap .subsCont {padding:10px 20px 20px 30px}
+.subscribeWrap .tpText {font-size: 20px; color: #2b2b2b}
+.subscribeWrap .quotes {font-size: 28px; color: #2b2b2b; font-weight: 900}
+.subscribeWrap p {font-size: 14px; color: #2b2b2b;padding:10px 0;}
+.subscribeWrap .inputBox {background: #f0f3f4; border-radius: 4px; border:1px solid #e6e6e6; padding: 9px 10px 9px 20px; 
+  line-height: 30px; height: 30px; color: #a9b2b7; font-size:14px; width: 265px;}
+  .subscribeWrap .inputBox:focus{border-color:#1e2539;}
+.subscribeWrap .subsBtn {background:#ff7400; border:1px solid #ff5a00; color: #fff; font-size:17px; font-weight: 700; cursor: pointer;
+height: 52px; line-height: 52px; text-align: center; width: 116px; border-radius: 4px; margin-left:6px;-webkit-appearance: none;-moz-appearance: none;appearance:none;outline:none;border:0;}
+.subscribeWrap .subsBtnHead{position: absolute;right:5%;bottom:41%;}
+.subscribeWrap .subsBtnHead1{position: absolute;right:5%;bottom:41%;}
+.subscribeWrap .subspp{font-size: 10px;color: #848484;line-height: 15px;width: 290px;margin-top:15px}
+.subscribeWrap .subspp a{font-size:10px;color: #0096ff}
+.subscribeWrap .subspp a:hover{text-decoration: underline;}
+/*============================================= Responsive ====================================================================================*/
+@media only screen and (max-width: 1240px){
+#nav li a{padding: 0 20px;}
+.container{width: 90%;}
+.category .cat_box{margin-right:2%;width: 18%;display: none;}
+.category .cat_desc{padding: 8px 10px;font-size: 14px;line-height: 18px;}
+.category .cat_title{font-size: 12px;line-height: 16px;padding: 5px 10px;}
+.category{margin-top: 0}
+.big_ed_box{margin-top: 20px;}
+.banner ul li img{height: auto;}  
+.top_ad img{width: 100%;}
+.info_panel{width: 576px;float: none;margin: 20px auto;clear: both;}
+.quiz_box{margin: 0}
+.banner ul li .tab{width: 335px;padding: 10px;}
+.banner ul li .tab_wrap{padding: 0 5px;}
+.banner ul li .tab_wrap .head{font-size: 30px;padding: 20px 0 5px;line-height: 34px;}
+.banner ul li .tab_wrap .sub_head{padding: 20px 0;font-size: 15px;line-height: 19px;}
+.banner{border-bottom: solid 40px #1e2539}
+.info_panel .container{width: 100%;}
+/*============= Common CSS ===============*/
+  .container{width: 90%; margin: 0 auto}
+/*============= Common CSS ===============*/
+
+/*============= Category Page Start ===============*/
+  .slide1{height: 400px;}
+  .categoryPage .leftContent{width: 100%; float: none; margin: 0 auto}
+  .categoryPage .rightContent{width: 100%; float: none; margin: 0 auto; margin-top: 20px; text-align: center}
+
+  /*Horizontal Block*/
+  .categoryPage .horizontalBlock .readMoreWrap{margin-top: 15px}
+  .categoryPage .horizontalBlock .imgWrap img{width: 100%; height: auto}
+  /*Horizontal Block*/
+
+
+  /*Vertical Block*/
+  .categoryPage .verticalBlock img{width: 100%; height: auto}
+  /*Vertical Block*/
+
+
+  /*Popular Posts Block*/
+  .categoryPage .popularPosts{width: 100%; margin: 0 auto; float: none; margin-top: 20px}
+  .categoryPage .innerPosts .horizontalBlock{float: left; width: 31.33%; margin-left: 3%; margin-top: 0}
+  .categoryPage .innerPosts .horizontalBlock:first-child{margin-left: 0}
+  .categoryPage .innerPosts .horizontalBlock .imgWrap{width: 27%; margin-right: 3%; height: auto}
+  .categoryPage .innerPosts .horizontalBlock .descWrap{width: 70%}
+  /*Popular Posts Block*/
+
+
+  /*Slider Block*/
+  .categoryPage .topPostSlider{width: 100%; float: none; margin: 0 auto}
+  .categoryPage .topPostSlider .imgBlock{width: 100%}
+  .categoryPage .topPostSlider .imgBlock .imgWrap{width: 100%; height: 300px}
+  .categoryPage .topPostSlider .imgBlock .title{padding-top: 200px}
+  /*Slider Block*/
+
+
+  /*Bottom Three Posts Block*/
+  .categoryPage .botPost .imgBlock{margin-left: 3%; width: 31.33%}
+  .categoryPage .botPost .imgBlock .imgWrap{width: 100%}
+  /*Bottom Three Posts Block*/
+
+
+  /*Trending Posts Block*/
+  .categoryPage .trendingPosts .verticalBlock .imgWrap{width: 100%; height: auto}
+  .categoryPage .trendingPosts .verticalBlock{width: 48.5%; margin-left: 3%;}
+  .categoryPage .trendingPosts .horizontalBlock{margin-right: 3%; width: 48.5%; margin-top: 20px}
+  .categoryPage .trendingPosts .horizontalBlock .imgWrap{width: 27%; margin-right: 3%; height: auto}
+  .categoryPage .trendingPosts .horizontalBlock .descWrap{width: 70%}
+  /*Trending Posts Block*/
+/*============= Category Page Ends ===============*/
+
+/*============= Article Page Start ===============*/
+  .articlePage .leftBlock, .articlePage .rightBlock{width: 620px; float: none; margin: 0 auto; text-align: center; margin-top: 20px}
+  .articlePage .articleContent, .articlePage .leftContentWrap{width: 100%; margin: 0 auto; float: none}
+
+  /*Article Content*/
+  .articlePage .articleTxt{text-align: center}
+  .articlePage .articleContent .relatedArticles{width: 530px; margin: 0 auto}
+  /*Article Content*/
+
+  /*Left Top Block*/
+  .articlePage .leftBlock .topBlock, .articlePage .leftBlock .botBlock{float: left}
+  .articlePage .leftBlock .topBlock{margin-right: 20px; margin-bottom: 0}
+  /*Left Top Block*/
+
+  /*Sign Up Block*/
+  .articlePage .rightBlock .signUpBlock, .articlePage .rightBlock .subscribeBlock{float: left}
+  .articlePage .rightBlock .signUpBlock{margin-right: 20px}
+  /*Sign Up Block*/
+/*============= Article Page Ends ===============*/
+}
+@media only screen and (max-width:1190px) {
+.headerTop, .navIn, .footerInn {width:95%}
+}
+@media only screen and (max-width:850px) {
+nav {background: no-repeat; height: 0}
+#nav-toggle {display: block; cursor: pointer}
+#nav{display: none}
+.searchBox {display: none;}
+.ovrblockWrap{display:block}
+.mobNav {display: block;}
+.menu_overlay {display: none;}
+.headerRht {margin-right: 50px}
+.footLinks a {margin: 0 8px}
+}
+@media all and (max-width: 793px) {
+  .main-signup-form {width: 100%}
+}
+@media only screen and (max-width: 767px){
+.category{display: none;}
+.banner ul li .tab{width: 190px;padding: 5px;margin:10% 16% 0 0;}
+.banner ul li .tab_wrap{padding: 0 5px;}
+.banner ul li .tab_wrap .head{font-size: 20px;padding: 8px 0 5px;line-height: 24px;}
+.banner ul li .tab_wrap .sub_head{padding: 7px 0;font-size: 12px;line-height: 16px;}
+.banner{border-bottom: solid 20px #1e2539}
+
+.slide1{height: 250px;}
+
+.info_panel{width: 278px;}
+.big_ed_box img{width: 100%;}
+.subsciber_box{margin: 0;}
+.quiz_box{margin-top: 20px;}
+.subsciber_box .title{font-size: 14px;line-height: 18px;}
+.subsciber_box .sub_title{font-size: 16px;line-height: 20px;}
+.subsciber_box .subscribe input{font-size: 14px;line-height: 18px;padding: 10px 0;width: 130px; -webkit-appearance:none;}
+.subsciber_box .title img{width: 20px;padding: 3px 15px 0 0;}
+.subsciber_box .notfc{padding: 20px 10px 15px;}
+.banner .bx-wrapper .bx-prev{left:7px;}   
+.banner .bx-wrapper .bx-next{right: 7px;}
+.info_panel{width: 90%;}
+.subsciber_box{width: auto;}
+.subsciber_box .email input{width: 96%;padding: 0 2%;}
+.quiz_box{width: 100%;}
+.card{text-align: center;}
+.big_ed_box{width: 100%;}
+
+/***** quiz page *****/
+.quiz_box .title{font-size: 14px;line-height: 18px;}
+.quiz_box .sub_title{font-size: 16px;line-height: 20px;}
+.quiz_box .title img{width: 15px;padding: 1px 15px 0 0;}
+.quiz_box .subscribe input{width: 80px;padding: 5px 15px;font-size: 14px;line-height: 18px; background-size: 7px;}
+.subsciber_box .email input{margin: 15px 0 15px;}
+
+.sub_box{float: none;margin: 0 auto;}
+.sub_box{width: 100%;background-size: 100%;}
+.sub_box .title{width: 90%;margin: 0 auto;}
+.sub_box .sub_title{width: 90%;margin: 0 auto;}
+.brNone{display:none;}
+
+
+.breadCumbs ul li.liElement{padding: 4px}
+  .breadCumbs ul li{margin-left: 5px}
+  
+/*============= Category Page Start ===============*/
+  /*Horizontal Block*/
+  .categoryPage .horizontalBlock .readMoreWrap{margin-top: 2px}
+  /*Horizontal Block*/
+
+
+  /*Popular Posts Block*/
+  .categoryPage .innerPosts .horizontalBlock{float: none; width: 100%; margin-left: 0; margin-top: 10px}
+  .categoryPage .innerPosts .horizontalBlock:first-child{margin-top: 0}
+  /*Popular Posts Block*/
+
+  /*Bottom Three Posts Block*/
+  .categoryPage .botPost{margin-top: 20px}
+  .categoryPage .botPost .imgBlock{float: none; width: 100%; margin: 0 auto; margin-top: 10px;}
+  .categoryPage .botPost .imgBlock:first-child{margin-top: 0}
+  /*Bottom Three Posts Block*/
+
+
+  /*Trending Posts Block*/
+  .categoryPage .trendingPosts .verticalBlock{width: 100%; float: none;margin: 0 auto; margin-top: 10px;}
+
+  .categoryPage .trendingPosts .verticalBlock:first-child{margin-top: 0;}
+  .categoryPage .trendingPosts .horizontalBlock{width: 100%; margin: 0 auto; margin-top: 10px}
+  .categoryPage .trendingPosts .horizontalBlock:first-child{margin-top: 0;}
+  /*Trending Posts Block*/
+
+
+  /*Related Articles Block*/
+  .categoryPage .relatedArticles{padding: 40px 0 55px}
+  /*Related Articles Block*/
+/*============= Category Page Ends ===============*/
+
+/*============= Article Page Start ===============*/
+  .articlePage .leftBlock, .articlePage .rightBlock{width: 100%; margin: 0 auto; float: none;margin-top: 20px}
+
+  /*Left Top Block*/
+  .articlePage .leftBlock .topBlock, .articlePage .leftBlock .botBlock{float: none; margin: 0 auto; width: 100%}
+  .articlePage .leftBlock .topBlock{margin-bottom: 20px}
+  /*Left Top Block*/
+
+  /*Sign Up Block*/
+  .articlePage .rightBlock .signUpBlock, .articlePage .rightBlock .subscribeBlock{float: none; margin: 0 auto; width: 100%}
+  .articlePage .rightBlock .signUpBlock{margin-bottom: 20px}
+  /*Sign Up Block*/
+
+  /*Article Content*/
+  .articlePage .articleTxt{margin-bottom: 20px}
+  .articlePage .articleTxt img{width: 100%}
+  .articlePage .articleContent .relatedArticles{display: none}
+  /*Article Content*/
+
+
+  /*Article Top Content*/
+  .articlePage .articleTitle{ font-size: 24px}
+  .articlePage .articleRatings{margin-bottom: 25px}
+  .articlePage .socialWrap{margin-bottom: 20px}
+  .articlePage .socialWrap .socialLinksWrap, .articlePage .socialWrap .printMailWrap{float: none;}
+  .articlePage .socialWrap .socialLinksWrap{margin-bottom: 10px}
+  .articlePage .printMailWrap a{width: 26px; height: 26px; border-radius: 50%; border:1px solid #c3c3c3; display: inline-block; text-align: center; line-height: 26px; margin-left: 7px}
+  .articlePage .printMailWrap a:first-child{margin-left: 0}
+  /*Article Top Content*/
+
+  /*Article Pagination*/
+  .articlePage .paginationWrap{margin-top: 20px}
+  /*Article Pagination*/
+/*============= Article Page Ends ===============*/
+.signup-fieldset {float: none;margin-bottom: 15px}
+.main-signup-form .signup-form-inner{padding: 20px 0px 20px 15px}
+.fieldset33,.fieldset50,.w-20,.w-37{width: 97%} 
+.signup-inputBox,.signup-select{width: 100%;}
+.signup-fieldset .signup-inputBox{width: 98%;}
+.signup-fieldset .bginput_email, .signup-fieldset .bginput_password{width: 40%}
+input[type=checkbox].signup-checkbox:not(old):checked + label{width: 90%;}
+.signupform-title{width: 80%; margin:0px auto; font-size: 24px;}
+}
+@media only screen and (max-width:520px) {
+.signInWrap .signupbtnwrap, .signInWrap .privacytextwrap{padding-top:15px;}
+.signInWrap .forgotlink a{font-size: 13px}
+.signInWrap .signupbtnwrap a{font-size: 14px}
+.signInWrap .signinBtn{height:40px;font-size: 14px;width: 120px}
+.signInWrap{width:350px}
+.signInWrap .signCont{padding: 25px 35px 10px;text-align: center}
+.signInWrap .signCont .inputBox{width: 240px;padding: 5px 2% 5px 12%;font-size: 13px}
+.signInWrap .closebtnWrap{right:-15px;top:-15px;}
+.signInWrap .closebtnWrap img{width: 15px;height: auto}
+.signInWrap .signinnote{padding-left: 22px}
+.signInWrap .signinCheckbox input[type=checkbox]:not(old):checked + label, .signInWrap .signinCheckbox input[type=checkbox]:not(old) + label{background-size: 15px auto;}
+.signInWrap .forgotmailtxt{font-size: 16px;line-height: 20px}
+.signInWrap .forgothelpWrap{background-position:90% bottom;padding-bottom: 110px}
+.signup-fieldset .bginput_email, .signup-fieldset .bginput_password{width: 65%}
+.signupbtn{width: 260px; padding: 15px 0px;}
+input[type=checkbox].signup-checkbox:not(old):checked + label{width: 85%;}
+.signup-step .step-title{width: 80%;}
+}
+@media only screen and (max-width: 420px){
+.banner ul li .tab_wrap .head{font-size: 15px;line-height: 19px;}
+}
+@media only screen and (max-width:400px) {
+.signInWrap .signinCheckbox, .signInWrap .forgotlink{float: none;text-align: left}
+.signInWrap .forgotlink{padding-top:10px;}
+.signInWrap{width:275px}
+.signInWrap .signCont{padding: 25px 23px 5px}
+.signInWrap .signCont .inputBox{width: 195px;}
+.headerTop .logo {float: none;}
+.headerRht .subscribe {height: 36px; line-height: 36px; width: 110px; font-size: 15px}
+.signIn {line-height: 36px}
+.headerRht {float: none; width: 175px; margin: 15px auto 0; overflow: hidden;}
+.signInWrap .signinbtnwrap{margin-top:15px;}
+}
+@media only screen and (max-width: 360px){
+  .footLinks a{font-size: 12px;}
+}
+@media only screen and (max-width: 340px){
+  .rightContent .lastAd img{display: none;}
+  .adImg img{width: 100%;}
+}
