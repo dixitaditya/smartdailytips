@@ -47,7 +47,8 @@
                     @include('partials.signinModal')                    
                     @endif
                 
-                <a href="#" class="subscribe">Subscribe</a>
+                    <a href="javascript:void(0);" onclick="modalOpen('subscribe')" class="subscribe">Subscribe</a>
+                    @include('partials.subscribeModal') 
             </div>
         </div>
 

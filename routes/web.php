@@ -20,9 +20,15 @@ Route::get('/category', function () {
     return view('category');
 })->name('category');
 
+Route::post('/subscripe', function () {
+    return 'subscribed';
+})->name('subscribe');
+
 Route::get('/signup','Auth\RegisterController@getSignupForm')->name('signupForm');
 Route::post('/signup','Auth\RegisterController@register')->name('signup');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
+Route::post('/login','Auth\LoginController@login')->name('login');
+
 
 
 
