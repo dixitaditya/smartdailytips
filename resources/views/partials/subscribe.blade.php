@@ -1,5 +1,4 @@
-@include('layouts.header')
-<div class="subsciber_box">
+    <div class="subsciber_box">
     <div class="title"><span><img src="images/mail.png"></span>Subscribe</div>
     <div class="content">
         <div class="sub_title">Need fun and free advice on love, food, health and more?</div>
@@ -33,4 +32,3 @@
     <div class="bot_text">By clicking the button above, you agree to the Terms & Conditions and Privacy Policy, and understand that you can opt out of the subscription at any time.</div>
     </div>			
 </div>
-@include('layouts.footer')

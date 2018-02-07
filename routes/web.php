@@ -20,14 +20,17 @@ Route::get('/category', function () {
     return view('category');
 })->name('category');
 
-Route::post('/subscripe', function () {
-    return 'subscribed';
-})->name('subscribe');
+// Route::post('/subscribe', function () {
+//     return 'subscribed';
+// })->name('subscribe');
 
 Route::get('/signup','Auth\RegisterController@getSignupForm')->name('signupForm');
 Route::post('/signup','Auth\RegisterController@register')->name('signup');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
 Route::post('/login','Auth\LoginController@login')->name('login');
+Route::post('/subscribeonly','SubscriptionController@subscribeOnly')->name('subscribeonly');
+Route::post('/subscribewithcategories','SubscriptionController@subscribeWithCategories')->name('subscribewithcategories');
+
 
 
 
@@ -40,6 +43,9 @@ Route::post('/login','Auth\LoginController@login')->name('login');
 | Test routes delete in production
 |
 */
+Route::get('/substest','SubscriptionController@substest')->name('substest');
+Route::post('/postsubstest','SubscriptionController@postsubstest')->name('postsubstest');
+
 Route::get('/incorrect', function () {
     return view('partials.correct');
 });

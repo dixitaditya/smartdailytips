@@ -86,4 +86,9 @@
         <div class="container">
             <img src="images/top_ad.jpg">
         </div>
+        @if(Session::has('info'))
+        <div style="background:#C2185B; color:#fff;width:500px;padding:20px 60px;margin-left:-310px;position:absolute;top:3px;left:50%;font-size:20px">
+               {{ Session::get('info') }}
+        </div>
+        @endif
     </div>

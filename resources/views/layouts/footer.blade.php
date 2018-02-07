@@ -62,6 +62,29 @@
         var modal = document.getElementById(event);
         modal.style.display = "none";
     }
+
+    function sendSubscriptionRequest(){
+       
+        var email1 = document.getElementById('modalSubsEmail').value;
+        var token = document.subscriptionModal._token.value;
+        //alert(token);
+        var url1 = '{{route('substest')}}';
+        //alert(url1);
+        $.ajax({
+            type:'POST',
+            url:'./subscribeonly',
+            data:{email: email1, _token: token},           
+            success:function(data){     
+                //alert('done');
+                console.log('added to subscription');
+                document.getElementById("subsContId").innerHTML=data;
+            }
+         });
+      
+
+    }
+     
+    document.getElementById("subs_modal_submit").addEventListener("click",sendSubscriptionRequest);
 </script>
 </body>
 </html>
