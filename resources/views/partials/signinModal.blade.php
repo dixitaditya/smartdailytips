@@ -40,7 +40,7 @@
             </div>
         </form> 
             <div class="signupbtnwrap">
-                <a href="#">Sign up</a>
+                <a href="{{route('signup')}}">Sign up</a>
             </div> 
             <div class="privacytextwrap">
                 <a href="#">Privacy Policy</a>

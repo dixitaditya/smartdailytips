@@ -16,7 +16,7 @@
                   <div class="quotes">our Daily Tips!</div>
                   <p>Get your Health, Parenting, Home &amp; Love <br /> smart tips directly in your mailbox.</p>
                   <input type="text" name="email" placeholder="Enter your email address" class="inputBox" id="modalSubsEmail"/>
-                  <input type="button" name="password" class="subsBtn" value="Subscribe" id="subs_modal_submit"/>
+                  <input type="button" name="submit" class="subsBtn" value="Subscribe" id="subs_modal_submit"/>
                   <div class="subspp">By clicking Subscribe, I agree to the <a href="#">Privacy Policy &amp; Terms &amp; Conditions</a> and understand that I may opt out of the subscription at any time.</div>
               </div>
             </form>

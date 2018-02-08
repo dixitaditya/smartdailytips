@@ -78,44 +78,22 @@
 
 <div class="info_panel clearfix">
 	<div class="container">
-		<div id="subs_replace_here">
+		<div id="subs_replace_here" style="clear: both">
 			@include('partials.subscribe')			
 		</div>
-
-		<div class="quiz_box">
-			<div class="title"><span><img src="images/star.png"></span>Daily Quiz</div>
-			<div class="content">
-				<div class="sub_title">Dancing for an hour burns approximately how many calories?</div>
-				<form action="" class="quiz_form">
-				<div class="options">
-				    <input type="radio" id="rad1" name="answer" value="Mind & Body">
-				    <label for="rad1">170 calories</label>
-				</div>	
-				<div class="options">
-				    <input type="radio" id="rad2" name="answer" value="270 calories">
-				    <label for="rad2">270 calories</label>
-				</div>
-				<div class="options">
-				    <input type="radio" id="rad3" name="answer" value="370 calories">
-				    <label for="rad3">370 calories</label>
-				</div>
-				<div class="options">
-				    <input type="radio" id="rad4" name="answer" value="470 calories">
-				    <label for="rad4">470 calories</label>
-				</div>
-				<div class="subscribe q_submit">
-					<input type="submit" value="Submit">
-				</div>	
-			</form>
-				
-			</div>	
-		</div>	
-		
+		@if(Auth::check())
+		<div id="quiz_replace_here">
+			@include('partials.dynamic_quiz_start')		
+		</div>
+		@else
+		<div id="quiz_replace_here">
+			@include('partials.dynamic_quiz_guest')	
+		</div>
+		@endif
 		<div class="big_ed_box">
 			<a href="#" title="click here"><img src="images/big_ed.jpg"></a>
 		</div>	
 		
 	</div>
 </div>
-
 @include('layouts.footer')

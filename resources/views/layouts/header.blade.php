@@ -12,6 +12,7 @@
 <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 <link rel="stylesheet" href="css/jquery.bxslider.css">
 <link href="css/style.css" rel="stylesheet" media="all">
+<link href="css/adi.css" rel="stylesheet" media="all">
 
 <!--[if lte IE 9]>
 <script type="text/javascript">
@@ -34,7 +35,7 @@
                     <img class="logo" src="{{ asset('/images/logo.jpg') }}" alt="smartdailytips.com"/>
                 </a>
             </h1>
-            <div class="headerRht">
+            <div class="headerRht adi_headerRht">
                     @if(Auth::check())
                    <a class="signIn" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                         Log Out

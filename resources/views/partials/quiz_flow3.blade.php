@@ -1,4 +1,4 @@
-<?php include("header.php"); ?>
+@include('layouts.header')
 
 
 <div class="banner clearfix">
@@ -148,4 +148,4 @@
 
 
 
-<?php include("footer.php"); ?>
+@include('layouts.footer')

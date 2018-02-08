@@ -30,7 +30,9 @@ Route::post('/logout','Auth\LoginController@logout')->name('logout');
 Route::post('/login','Auth\LoginController@login')->name('login');
 Route::post('/subscribeonly','SubscriptionController@subscribeOnly')->name('subscribeonly');
 Route::post('/subscribewithcategories','SubscriptionController@subscribeWithCategories')->name('subscribewithcategories');
-
+Route::post('/ajaxsubscribewithcategories','SubscriptionController@ajaxsubscribeWithCategories')->name('ajaxsubscribewithcategories');
+Route::post('/checkresult','QuizController@checkResult')->name('checkresult');
+Route::get('/nextquiz','QuizController@getNextQuiz')->name('nextquiz');
 
 
 
@@ -43,8 +45,19 @@ Route::post('/subscribewithcategories','SubscriptionController@subscribeWithCate
 | Test routes delete in production
 |
 */
+
+
+
+Route::get('/quizrand','QuizController@getRandomQuiz')->name('quizrand');
+Route::get('/quizline','QuizController@getQuizInOrder')->name('quizline');
+Route::get('/first','QuizController@firstfetch')->name('firstfetch');
+
+
+Route::post('/signup','Auth\RegisterController@register')->name('signup');
+
 Route::get('/substest','SubscriptionController@substest')->name('substest');
 Route::post('/postsubstest','SubscriptionController@postsubstest')->name('postsubstest');
+
 
 Route::get('/incorrect', function () {
     return view('partials.correct');
@@ -64,6 +77,9 @@ Route::get('/quizflow1', function () {
 
 Route::get('/quizflow2', function () {
     return view('partials.quiz_flow2');
+});
+Route::get('/quizflow3', function () {
+    return view('partials.quiz_flow3');
 });
 
 Route::get('/subscribe', function () {
@@ -93,6 +109,14 @@ Route::get('/thankyou1', function () {
 Route::get('/home', function () {
     return view('home');
 });
-Route::get('/', function () {
-    return view('welcome');
-});
+
+/*
+|--------------------------------------------------------------------------
+| Make a home controller route to send the base link
+|--------------------------------------------------------------------------
+|
+| and set $_SESSION['quiz_id']=1 and fetch the quiz
+|
+*/
+Route::get('/','HomeController@index')->name('home');
+
