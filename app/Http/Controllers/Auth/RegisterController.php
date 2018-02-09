@@ -68,6 +68,7 @@ class RegisterController extends Controller
             'dob_day' => 'required',
             'dob_year' => 'required',
             'email' => 'required|string|email|max:255',
+            'confirm_email' => 'required|string|email|max:255',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -81,19 +82,20 @@ class RegisterController extends Controller
     protected function create(array $data)
     {   
         $mydob='2018-1-22';
-        
-        return User::create([
-            'title_name' => $data['title_name'],
-            'first_name' => $data['first_name'],
-            'last_name' => $data['last_name'],
-            'street_add' => $data['street_add'],
-            'apt' => $data['apt'],
-            'city' => $data['city'],
-            'state' => $data['state'],
-            'zip' => $data['zip'],
-            'date_of_birth' => $mydob,
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        if( $data['email'] === $data['confirm_email'] && $data['password'] === $data['password_confirmation']){
+            return User::create([
+                'title_name' => $data['title_name'],
+                'first_name' => $data['first_name'],
+                'last_name' => $data['last_name'],
+                'street_add' => $data['street_add'],
+                'apt' => $data['apt'],
+                'city' => $data['city'],
+                'state' => $data['state'],
+                'zip' => $data['zip'],
+                'date_of_birth' => $mydob,
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+            ]);
+        } 
     }
 }

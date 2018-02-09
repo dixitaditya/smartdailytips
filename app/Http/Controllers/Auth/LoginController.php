@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
+use Lang;
+use Illuminate\Http\Request;
+
 class LoginController extends Controller
 {
     /*
@@ -26,7 +29,7 @@ class LoginController extends Controller
      * @var string
      */
     protected $redirectTo = '/';
-
+    // protected $loginPath = '/signup';
     /**
      * Create a new controller instance.
      *
@@ -36,4 +39,37 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | following lines added 
+    |--------------------------------------------------------------------------
+    | along with 
+    | use Lang;
+    | use Illuminate\Http\Request;
+    | 
+    | to redirect after failed login
+    | 
+    |
+    */
+
+
+    /**
+     * Get the failed login response instance.
+     *
+     * @param \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        return redirect()->to('/')
+            ->with('info', 'Login Failed !! Credentials not matched')
+            ->withInput($request->only($this->username(), 'remember'))
+            ->withErrors([
+                $this->username() => Lang::get('auth.failed'),
+            ]);
+    }
+
+
 }

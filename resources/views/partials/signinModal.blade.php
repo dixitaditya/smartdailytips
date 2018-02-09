@@ -11,21 +11,23 @@
         <div class="signCont">
         <form method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
+                @if ($errors->has('email'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+                <br/>
+                @endif    
             <input type="text" name="email" placeholder="Email" class="inputBox sEmal" value="{{ old('email') }}"/>
-            @if ($errors->has('email'))
-            <span class="help-block">
-                <strong>{{ $errors->first('email') }}</strong>
-            </span>
-            @endif
+            
             <input type="password" name="password" placeholder="Password" class="inputBox sPwd" />
-            @if ($errors->has('password'))
+            {{--  @if ($errors->has('password'))
             <span class="help-block">
                 <strong>{{ $errors->first('password') }}</strong>
             </span>
-            @endif
+            @endif  --}}
             <div class="clearfix">
                 <div class="signinCheckbox">
-                <input id="pp" name="remember" type="checkbox" checked>
+                <input id="ppp" name="remember" type="checkbox" checked>
                     <label for="pp">
                         <div class="signinnote">Keep me signed in</div>
                     </label>

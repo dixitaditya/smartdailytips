@@ -52,22 +52,22 @@
 					<div class="cat_desc">Quick Workout</div></div>		
 				</li>
 				<li class="cat_box">
-					<div class="cat_img"><img src="images/img1.jpg"></div>
+					<div class="cat_img"><img src="images/img2.jpg"></div>
 					<div class="cat_wrap"><div class="cat_title green_label">Diet & Fitness</div>
 					<div class="cat_desc">Quick Workout</div></div>		
 				</li>
 				<li class="cat_box">
-					<div class="cat_img"><img src="images/img1.jpg"></div>
+					<div class="cat_img"><img src="images/img3.jpg"></div>
 					<div class="cat_wrap"><div class="cat_title yellow_label">Diet & Fitness</div>
 					<div class="cat_desc">Quick Workout</div></div>		
 				</li>
 				<li class="cat_box">
-					<div class="cat_img"><img src="images/img1.jpg"></div>
+					<div class="cat_img"><img src="images/img4.jpg"></div>
 					<div class="cat_wrap"><div class="cat_title blue_label">Diet & Fitness</div>
 					<div class="cat_desc">Quick Workout</div></div>		
 				</li>
 				<li class="cat_box mg0">
-					<div class="cat_img"><img src="images/img1.jpg"></div>
+					<div class="cat_img"><img src="images/img5.jpg"></div>
 					<div class="cat_wrap"><div class="cat_title red_label">Diet & Fitness</div>
 					<div class="cat_desc">Quick Workout</div></div>		
 				</li>

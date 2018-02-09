@@ -31,7 +31,7 @@
 <header>
         <div class="headerTop clearfix">
             <h1 class="logo">
-                <a href="index.php" title="mensLifestyle.com">
+                <a href="{{ route('home') }}" title="mensLifestyle.com">
                     <img class="logo" src="{{ asset('/images/logo.jpg') }}" alt="smartdailytips.com"/>
                 </a>
             </h1>
@@ -59,11 +59,11 @@
         <nav class="clearfix"> 
             <div class="navIn clearfix">          
                 <ul id="nav">
-                    <li><a href="{{route('category')}}" title="Diet & Fitness" class="active">Diet &amp; Fitness</a></li>
-                    <li><a href="#" title="Food & Recipes">Food &amp; Recipes</a></li>
-                    <li><a href="#" title="Style & Beauty">Style &amp; Beauty</a></li>
-                    <li><a href="#" title="Moms">Moms</a></li>
-                    <li><a href="#" title="Love">Love</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/diet-fitness/" title="Diet & Fitness" class="active">Diet &amp; Fitness</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/food-recipes/" title="Food & Recipes">Food &amp; Recipes</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/style-beauty/" title="Style & Beauty">Style &amp; Beauty</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/moms/" title="Moms">Moms</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/love/" title="Love">Love</a></li>
                 </ul>
                 <ul class="mobNav" id="mobNav">
                     <li class="searchwrap">
@@ -90,6 +90,19 @@
         @if(Session::has('info'))
         <div style="background:#C2185B; color:#fff;width:500px;padding:20px 60px;margin-left:-310px;position:absolute;top:3px;left:50%;font-size:20px">
                {{ Session::get('info') }}
+               <script>function modalOpen(event) {        
+                    var modal = document.getElementById(event);
+                    modal.style.display = "block";
+                    window.onclick = function(event) {            
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                      }
+                    }
+                
+                    modalOpen('signin');
+                </script>
+                    
         </div>
         @endif
     </div>

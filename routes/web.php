@@ -24,7 +24,8 @@ Route::get('/category', function () {
 //     return 'subscribed';
 // })->name('subscribe');
 
-Route::get('/signup','Auth\RegisterController@getSignupForm')->name('signupForm');
+Route::get('/signup','Auth\RegisterController@getSignupForm')->name('signupForm')->middleware('guest');
+Route::get('/login','Auth\LoginController@showLoginForm')->name('login')->middleware('guest');
 Route::post('/signup','Auth\RegisterController@register')->name('signup');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
 Route::post('/login','Auth\LoginController@login')->name('login');
@@ -34,6 +35,9 @@ Route::post('/ajaxsubscribewithcategories','SubscriptionController@ajaxsubscribe
 Route::post('/checkresult','QuizController@checkResult')->name('checkresult');
 Route::get('/nextquiz','QuizController@getNextQuiz')->name('nextquiz');
 
+Route::get('/mycategory', function () {
+    return Redirect::to('https://medium.com/new-york-times-magazine/what-teenagers-are-learning-from-online-porn-95c89176e070');
+})->name('category')->middleware('auth');
 
 
 
@@ -45,7 +49,6 @@ Route::get('/nextquiz','QuizController@getNextQuiz')->name('nextquiz');
 | Test routes delete in production
 |
 */
-
 
 
 Route::get('/quizrand','QuizController@getRandomQuiz')->name('quizrand');
