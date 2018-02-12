@@ -27,8 +27,8 @@
                 <div class="signup-row clearfix">
                     <fieldset class="signup-fieldset w-20">
                         <label for="title_name" class="signup-label">Title</label>
-                        <select name="title_name" id="title_name" class="signup-select">
-                            <option value="select">Select</option>
+                        <select name="title_name" id="title_name" class="signup-select" value="{{old('title_name')}}"> 
+                            <option value="select" >Select</option>
                             <option value="Mr">Mr</option>
                             <option value="Ms">Ms</option>
                             <option value="Mrs">Mrs</option>
@@ -36,68 +36,60 @@
                     </fieldset>
                     <fieldset class="signup-fieldset w-37">
                         <label for="first_name" class="signup-label">First Name</label>
-                        <input type="text" class="signup-inputBox" id="first_name" name="first_name">
+                        <input type="text" class="signup-inputBox" id="first_name" name="first_name" value="{{old('first_name')}}">
                     </fieldset>
                     <fieldset class="signup-fieldset w-37 mg-right-0">
                         <label for="last_name" class="signup-label">Last Name</label>
-                        <input type="text" class="signup-inputBox" id="last_name" name="last_name">
+                        <input type="text" class="signup-inputBox" id="last_name" name="last_name" value="{{old('last_name')}}">
                     </fieldset>
                 </div>
                 <div class="signup-row clearfix">
                     <fieldset class="signup-fieldset fieldset50">
                         <label for="street_add" class="signup-label">Street Addresss / P.O. Box</label>
-                        <input type="text" class="signup-inputBox" id="street_add" name="street_add">
+                        <input type="text" class="signup-inputBox" id="street_add" name="street_add" value="{{old('street_add')}}">
                     </fieldset>
                     <fieldset class="signup-fieldset fieldset50 mg-right-0">
                         <label for="apt" class="signup-label">Apt</label>
-                        <input type="text" class="signup-inputBox" id="apt" name="apt">
+                        <input type="text" class="signup-inputBox" id="apt" name="apt" value="{{old('apt')}}">
                     </fieldset>
                 </div>
                 <div class="signup-row clearfix">
                     <fieldset class="signup-fieldset fieldset33">
                         <label for="city" class="signup-label">City</label>
-                        <input type="text" class="signup-inputBox" id="city" name="city">
+                        <input type="text" class="signup-inputBox" id="city" name="city" value="{{old('city')}}">
                     </fieldset>
                     <fieldset class="signup-fieldset fieldset33">
                         <label for="state" class="signup-label">State</label>
-                        <select name="state" id="state" class="signup-select">
+                        <select name="state" id="state" class="signup-select" value="{{old('state')}}">
                             <option value="select">Select</option>
-                            <option value="1">Ohio</option>
-                            <option value="2">Arizona</option>
-                            <option value="3">Texas</option>
+                            @include('dataOptions.state')
                         </select>
                     </fieldset>
                     <fieldset class="signup-fieldset fieldset33 mg-right-0">
                         <label for="zip" class="signup-label">Zip</label>
-                        <input type="text" class="signup-inputBox" id="zip" name="zip">
+                        <input type="text" class="signup-inputBox" id="zip" name="zip" value="{{old('zip')}}">
                     </fieldset>
                 </div>
                 <div class="signup-row clearfix">
                     <fieldset class="signup-fieldset fieldset33">
                         <label for="dob" class="signup-label">Date of birth</label>
-                        <select name="dob_month" id="dob_month" class="signup-select">
-                            <option value="Month">Month</option>
-                            <option value="1">Ohio</option>
-                            <option value="2">Arizona</option>
-                            <option value="3">Texas</option>
+                        <select name="dob_month" id="dob_month" class="signup-select" value="{{old('dob_month')}}">
+                            <option value="Month" selected="true" disabled="disabled">Month</option>
+                            @include('dataOptions.month')
                         </select>
                     </fieldset>
                     <fieldset class="signup-fieldset fieldset33">
                         <label for="dob_day" class="signup-label">&nbsp;</label>
-                        <select name="dob_day" id="dob_day" class="signup-select">
-                            <option value="Day">Day</option>
-                            <option value="1">Ohio</option>
-                            <option value="2">Arizona</option>
-                            <option value="3">Texas</option>
+                        <select name="dob_day" id="dob_day" class="signup-select" value="{{old('dob_day')}}">
+                            <option value="Day" selected="true" disabled="disabled">Day</option>
+                            @include('dataOptions.date')
                         </select>
                     </fieldset>
                     <fieldset class="signup-fieldset fieldset33 mg-right-0">
                         <label for="dob_year" class="signup-label">&nbsp;</label>
-                        <select name="dob_year" id="dob_year" class="signup-select">
-                            <option value="Year">Year</option>
-                            <option value="1">Ohio</option>
-                            <option value="2">Arizona</option>
-                            <option value="3">Texas</option>
+                        <select name="dob_year" id="dob_year" class="signup-select" value="{{old('dob_year')}}">
+                            <option value="Year" selected="true" disabled="disabled">Year</option>
+                            @include('dataOptions.year')
                         </select>
                     </fieldset>
                 </div>
@@ -108,11 +100,11 @@
                 <div class="signup-row clearfix">
                     <fieldset class="signup-fieldset fieldset33">
                         <label for="email" class="signup-label">Email</label>
-                        <input type="text" class="signup-inputBox bginput_email" id="email" name="email">
+                        <input type="text" class="signup-inputBox bginput_email" id="email" name="email" value="{{old('email')}}">
                     </fieldset>
                     <fieldset class="signup-fieldset fieldset33 mg-right-0">
                         <label for="confirm_email" class="signup-label">Confirm email</label>
-                        <input type="text" class="signup-inputBox bginput_email" id="confirm_email" name="confirm_email">
+                        <input type="text" class="signup-inputBox bginput_email" id="confirm_email" name="email_confirmation">
                     </fieldset>
                 </div>
                 <div class="signup-row clearfix">

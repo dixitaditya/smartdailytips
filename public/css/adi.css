@@ -6,3 +6,26 @@
 .adi_question_style .questions.quiz_box .content {
     padding: 38px 10px 20px;
 }
+
+.category .cat_box .cat_img img {
+    width: 218px;
+    height: 142px !important;
+}
+
+.category .cat_box .cat_img {
+    width: 218px;
+    height: 142px;
+}
+
+.category .cat_box:hover {
+    transform: translateY(-20px);
+}
+
+.category .cat_box {
+   
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}

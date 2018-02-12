@@ -64,11 +64,10 @@ class RegisterController extends Controller
             'city' => 'required|string|max:255',
             'state' => 'required|string|max:255',
             'zip' => 'required|string|max:255',
-            'dob_month' => 'required',
-            'dob_day' => 'required',
-            'dob_year' => 'required',
-            'email' => 'required|string|email|max:255',
-            'confirm_email' => 'required|string|email|max:255',
+            'dob_month' => 'required|max:2',
+            'dob_day' => 'required|max:2',
+            'dob_year' => 'required|max:4',
+            'email' => 'required|string|email|max:255|confirmed',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -82,7 +81,9 @@ class RegisterController extends Controller
     protected function create(array $data)
     {   
         $mydob='2018-1-22';
-        if( $data['email'] === $data['confirm_email'] && $data['password'] === $data['password_confirmation']){
+        $dob = $data['dob_year']."-".$data['dob_month']."-".$data['dob_day'];
+        
+        if( $data['email'] === $data['email_confirmation'] && $data['password'] === $data['password_confirmation']){
             return User::create([
                 'title_name' => $data['title_name'],
                 'first_name' => $data['first_name'],
@@ -92,7 +93,7 @@ class RegisterController extends Controller
                 'city' => $data['city'],
                 'state' => $data['state'],
                 'zip' => $data['zip'],
-                'date_of_birth' => $mydob,
+                'date_of_birth' => $dob,
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
             ]);

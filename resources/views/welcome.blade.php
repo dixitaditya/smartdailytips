@@ -47,29 +47,39 @@
 		<div class="container">
 			<ul>
 				<li class="cat_box">
-					<div class="cat_img"><img src="images/img1.jpg"></div>
-					<div class="cat_wrap"><div class="cat_title l_blue_label">Diet & Fitness</div>
-					<div class="cat_desc">Quick Workout</div></div>		
+					<a href="#">
+						<div class="cat_img"><img src="images/img1.jpg"></div>
+						<div class="cat_wrap"><div class="cat_title l_blue_label">Diet & Fitness</div>
+						<div class="cat_desc">Quick Workout</div></div>
+					</a>		
 				</li>
 				<li class="cat_box">
-					<div class="cat_img"><img src="images/img2.jpg"></div>
-					<div class="cat_wrap"><div class="cat_title green_label">Diet & Fitness</div>
-					<div class="cat_desc">Quick Workout</div></div>		
+					<a href="#">
+						<div class="cat_img"><img src="images/img2.jpg"></div>
+						<div class="cat_wrap"><div class="cat_title green_label">Food & Recipes</div>
+						<div class="cat_desc">Healthy Dinner Hacks</div></div>
+					</a>		
 				</li>
 				<li class="cat_box">
-					<div class="cat_img"><img src="images/img3.jpg"></div>
-					<div class="cat_wrap"><div class="cat_title yellow_label">Diet & Fitness</div>
-					<div class="cat_desc">Quick Workout</div></div>		
+					<a href="#">
+						<div class="cat_img"><img src="images/img3.jpg"></div>
+						<div class="cat_wrap"><div class="cat_title yellow_label">STYLE & BEAUTY</div>
+						<div class="cat_desc">Bad Hair Day Fixes</div></div>	
+					</a>	
 				</li>
 				<li class="cat_box">
-					<div class="cat_img"><img src="images/img4.jpg"></div>
-					<div class="cat_wrap"><div class="cat_title blue_label">Diet & Fitness</div>
-					<div class="cat_desc">Quick Workout</div></div>		
+					<a href="#">
+						<div class="cat_img"><img src="images/img4.jpg"></div>
+						<div class="cat_wrap"><div class="cat_title blue_label">MOMS</div>
+						<div class="cat_desc">Speed Clean</div></div>
+					</a>	
 				</li>
 				<li class="cat_box mg0">
-					<div class="cat_img"><img src="images/img5.jpg"></div>
-					<div class="cat_wrap"><div class="cat_title red_label">Diet & Fitness</div>
-					<div class="cat_desc">Quick Workout</div></div>		
+					<a href="#">
+						<div class="cat_img"><img src="images/img5.jpg"></div>
+						<div class="cat_wrap"><div class="cat_title red_label">LOVE</div>
+						<div class="cat_desc">Unique Date Ideas</div></div>
+					</a>	
 				</li>
 			</ul>
 		</div>

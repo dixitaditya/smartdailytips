@@ -33,7 +33,8 @@
                     </label>
                 </div> 
                 <div class="forgotlink">
-                    <a href="javascript:void(0);" onclick="modalOpen('forgotPass')" data-dismiss="modal">forgot password?</a>
+                    {{--  <a href="javascript:void(0);" onclick="modalOpen('forgotPass')" data-dismiss="modal">forgot password?</a>  --}}
+                    <a href="{{ route('password.request') }}" >forgot password?</a>
                 </div>
             </div> 
           
