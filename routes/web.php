@@ -117,6 +117,16 @@ Route::get('/sweep-signup', function () {
 Route::get('/thankyou1', function () {
     return view('partials.thankyou1');
 });
+/*
+|--------------------------------------------------------------------------
+| Test Mail Routes
+|--------------------------------------------------------------------------
+|
+| Test routes delete in production
+|
+*/
+
+Route::get('/shootmail','TestMailController@sendMail');
 
 /*
 |--------------------------------------------------------------------------
