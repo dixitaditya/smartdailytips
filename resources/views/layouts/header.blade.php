@@ -21,9 +21,19 @@
 <style type="text/css">
 </style>
 <![endif]-->
+<!--[if IE]>
+<style>
+  .subsciber_box .checkbox input[type=checkbox]{display: inline-block;}
+.quiz_box .quiz_form .options input[type=radio]{display: inline-block;}
 
-<!--[if lte IE 7]>    
+
+.subsciber_box .email input{width: 228px;height: 40px;border-radius: 5px;border: solid 1px #6b6b6b;padding: 0 10px;margin: 25px 0 25px;line-height:40px}
+</style>
+<![endif]-->
+<!--[if lte IE 8]>    
 <style type="text/css">
+    .banner .bx-wrapper .bx-next{border:0}
+.banner .bx-wrapper .bx-prev{border:0}
 </style>
 <![endif]-->
 </head>

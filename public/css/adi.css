@@ -29,3 +29,6 @@
     -o-transition: all 0.35s ease;
     transition: all 0.35s ease;
 }
+.slide1{height: 500px;background:#aaaaaa url('../images/slider.jpg') no-repeat top center;background-size: cover;}
+/* .quiz_box .quiz_form .options label{color: #717679;font-size: 14px;line-height: 21px;padding-left: 35px; word-break: break-all;} */
+/* .quiz_box .quiz_form .options input[type=radio]:not(old) + label{display:inline-block;vertical-align: middle; background:url('../images/rad_unchk.png') no-repeat left center;text-align: left; width: auto;line-height: 23px} */

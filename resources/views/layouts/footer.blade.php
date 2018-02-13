@@ -119,7 +119,7 @@
                 option2: option2,
                 option3: option3,
                 option4: option4,
-                option5: option5,
+                option5: option5
             
             },           
              success:function(data){     
@@ -133,7 +133,21 @@
      }
      function sendResultCheckRequest(){
         
-         var option = document.querySelector('input[name="answer"]:checked').value;
+         //var option = document.querySelector('input[name="answer"]:checked').value;
+          if(document.getElementById("rad1").checked){
+                option = document.getElementById("rad1").value;
+          }else if(document.getElementById("rad2").checked){
+            option = document.getElementById("rad2").value;
+          }else if(document.getElementById("rad3").checked){
+            option = document.getElementById("rad3").value;
+          }else if(document.getElementById("rad4").checked){
+            option = document.getElementById("rad4").value;
+          }else{
+            option = document.getElementById("rad4").value;
+            //console.log("you have not selected a value so option1 selected by default");
+            window.alert('select at least on options');
+            return;
+          } 
          //alert(option);
          var token = document.subscriptionModal._token.value;
         //alert(token);
@@ -243,5 +257,28 @@
         });
     
 </script>
+<!--[if lte IE8]> 
+<script>
+function getElementsByClassName(node, classname) {
+    var a = [];
+    var re = new RegExp('(^| )'+classname+'( |$)');
+    var els = node.getElementsByTagName("*");
+    for(var i=0,j=els.length; i<j; i++)
+        if(re.test(els[i].className))a.push(els[i]);
+    return a;
+}
+    var tabs = getElementsByClassName(document.body,'quiz_options');
+console.log(tabs.length);
+for(var i=0;i<tabs.length;i++){
+tabs[i].onclick = (function ex(){
+    console.log(i);
+    })();
+}
+    
+</script>
+<script>
+
+</script>
+<![endif]-->
 </body>
 </html>
