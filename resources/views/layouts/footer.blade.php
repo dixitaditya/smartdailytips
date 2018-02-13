@@ -134,6 +134,7 @@
      function sendResultCheckRequest(){
         
          //var option = document.querySelector('input[name="answer"]:checked').value;
+         // query selector doesn't work in IE7 and 8
           if(document.getElementById("rad1").checked){
                 option = document.getElementById("rad1").value;
           }else if(document.getElementById("rad2").checked){
