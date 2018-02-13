@@ -10,6 +10,7 @@ class TestMailController extends Controller
 {
     //
     public function sendMail(){
-        Mail::to('admin@admin2.com')->send(new TestMail);
+        $loggedUser = 'admin@admin.com';
+        Mail::to($loggedUser)->send(new TestMail);
     }
 }
