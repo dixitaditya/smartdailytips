@@ -1,7 +1,18 @@
-@media only screen and (max-width: 400px){
-.adi_headerRht{
-    width:200px;
+@media only screen and (max-width: 767px){
+    .banner .bx-wrapper {
+        border: 0;
+        margin-bottom: 0;
+        height: 250px;
+    }
+    .banner ul li .slide1 {
+        height: 250px;
+    }
 }
+@media only screen and (max-width: 500px){
+    .adi_headerRht{
+        width:220px;
+        padding-left:20px;
+    }
 }
 .adi_question_style .questions.quiz_box .content {
     padding: 38px 10px 20px;
@@ -11,7 +22,10 @@
     width: 218px;
     height: 142px !important;
 }
-
+.headerTop .logo {
+    float: left;
+    padding-top: 0px;
+}
 .category .cat_box .cat_img {
     width: 218px;
     height: 142px;
@@ -28,6 +42,9 @@
     -ms-transition: all 0.35s ease;
     -o-transition: all 0.35s ease;
     transition: all 0.35s ease;
+}
+#nav li a {
+    text-transform: uppercase;
 }
 .slide1{height: 500px;background:#aaaaaa url('../images/slider.jpg') no-repeat top center;background-size: cover;}
 /* .quiz_box .quiz_form .options label{color: #717679;font-size: 14px;line-height: 21px;padding-left: 35px; word-break: break-all;} */

@@ -45,6 +45,12 @@ class RegisterController extends Controller
         return view('signupform');
     }
 
+    public function getSignupFormRef()
+    {
+       
+        return view('signupform_ref_yellow');
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *

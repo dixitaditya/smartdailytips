@@ -101,7 +101,7 @@
 		</div>
 		@endif
 		<div class="big_ed_box">
-			<a href="#" title="click here"><img src="images/big_ed.jpg"></a>
+			<a href="{{route('signupFormRef')}}" title="click here"><img src="images/big_ed.jpg"></a>
 		</div>	
 		
 	</div>

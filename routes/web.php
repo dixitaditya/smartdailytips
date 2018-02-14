@@ -25,6 +25,7 @@ Route::get('/category', function () {
 // })->name('subscribe');
 
 Route::get('/signup','Auth\RegisterController@getSignupForm')->name('signupForm')->middleware('guest');
+Route::get('/signupref','Auth\RegisterController@getSignupFormRef')->name('signupFormRef')->middleware('guest');
 Route::get('/login','Auth\LoginController@showLoginForm')->name('login')->middleware('guest');
 Route::post('/signup','Auth\RegisterController@register')->name('signup');
 Route::post('/logout','Auth\LoginController@logout')->name('logout');
@@ -110,12 +111,15 @@ Route::get('/subscribeflow', function () {
     return view('partials.subscribe_flow');
 });
 
-Route::get('/sweep-signup', function () {
+Route::get('/sweepsignup', function () {
     return view('partials.sweep-signup');
 });
 
 Route::get('/thankyou1', function () {
     return view('partials.thankyou1');
+})->middleware('auth');
+Route::get('/signupyellow', function () {
+    return view('signupform_ref_yellow');
 });
 /*
 |--------------------------------------------------------------------------
