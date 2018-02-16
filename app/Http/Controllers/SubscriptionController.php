@@ -30,7 +30,7 @@ class SubscriptionController extends Controller
         $validatedData = $request->validate([
             'email' => 'required|email|max:255',
         ]);
-        if(Subscribe::where('email',$request->email)->exists())
+        if(Subscribe::where('email',$request->email)->where('subscription_category', '0')->exists() )
         {
              return view('partials.subscribedAlreadyModal');
         }
@@ -45,6 +45,7 @@ class SubscriptionController extends Controller
     }
 
     public function subscribeWithCategories(Request $request){
+        return view('partials.subscribed_already');
         $validatedData = $request->validate([
             'email' => 'required|email|max:255',
             'option1' => 'max:1',
@@ -71,10 +72,10 @@ class SubscriptionController extends Controller
          if($request->option5 !== NULL){
             array_push($options_array,$request->option5);           
          }
-         
+         return view('partials.subscribed_already');
          if(Subscribe::where('email',$request->email)->where('subscription_category', '0')->exists())
          {
-              dd('already subscribed for generic category');
+            return 'you shizz';
          }
         else{
             foreach($options_array as $single_option){
@@ -120,10 +121,13 @@ class SubscriptionController extends Controller
          if($request->option5 !== NULL){
             array_push($options_array,$request->option5);           
          }
+         if($options_array==[]){
+            array_push($options_array,'0'); 
+         }
          
          if(Subscribe::where('email',$request->email)->where('subscription_category', '0')->exists())
          {
-              dd('already subscribed for generic category');
+            return view('partials.subscribed_already');
          }
         else{
             foreach($options_array as $single_option){

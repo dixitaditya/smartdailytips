@@ -17,9 +17,14 @@
                 </span>
                 <br/>
                 @endif    
+            <div class="signInInputPadding">
+                <!--[if lte IE 7]> <label for="email">Enter Email</label>  <![endif]-->
             <input type="text" name="email" placeholder="Email" class="inputBox sEmal" value="{{ old('email') }}"/>
-            
+            </div>
+            <div class="signInInputPadding">
+                <!--[if lte IE 7]> <label for="password">Enter Password</label>  <![endif]-->
             <input type="password" name="password" placeholder="Password" class="inputBox sPwd" />
+            </div>
             {{--  @if ($errors->has('password'))
             <span class="help-block">
                 <strong>{{ $errors->first('password') }}</strong>
@@ -27,8 +32,8 @@
             @endif  --}}
             <div class="clearfix">
                 <div class="signinCheckbox">
-                <input id="ppp" name="remember" type="checkbox" checked>
-                    <label for="pp">
+                <input id="ppp" name="remember" type="checkbox" >
+                    <label for="ppp">
                         <div class="signinnote">Keep me signed in</div>
                     </label>
                 </div> 

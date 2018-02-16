@@ -45,38 +45,39 @@
 	</ul>
 	<div class="category">
 		<div class="container">
+			{{--  here image is again wrapped in anchor tag cause in IE7 outer most anchr tag is not working on image inclosed within div  --}}
 			<ul>
 				<li class="cat_box">
-					<a href="#">
-						<div class="cat_img"><img src="images/img1.jpg"></div>
+					<a href="https://stagingdemoonline.com/smartdailytips/category/diet-fitness/">
+						<div class="cat_img"><a href="https://stagingdemoonline.com/smartdailytips/category/diet-fitness/"><img src="images/img1.jpg"></a></div>
 						<div class="cat_wrap"><div class="cat_title l_blue_label">Diet & Fitness</div>
 						<div class="cat_desc">Quick Workout</div></div>
 					</a>		
 				</li>
 				<li class="cat_box">
-					<a href="#">
-						<div class="cat_img"><img src="images/img2.jpg"></div>
+					<a href="https://stagingdemoonline.com/smartdailytips/category/food-recipes/">
+						<div class="cat_img"><a href="https://stagingdemoonline.com/smartdailytips/category/food-recipes/"><img src="images/img2.jpg"></a></div>
 						<div class="cat_wrap"><div class="cat_title green_label">Food & Recipes</div>
 						<div class="cat_desc">Healthy Dinner Hacks</div></div>
 					</a>		
 				</li>
 				<li class="cat_box">
-					<a href="#">
-						<div class="cat_img"><img src="images/img3.jpg"></div>
+					<a href="https://stagingdemoonline.com/smartdailytips/category/style-beauty/">
+						<div class="cat_img"><a href="https://stagingdemoonline.com/smartdailytips/category/style-beauty/"><img src="images/img3.jpg"></a></div>
 						<div class="cat_wrap"><div class="cat_title yellow_label">STYLE & BEAUTY</div>
 						<div class="cat_desc">Bad Hair Day Fixes</div></div>	
 					</a>	
 				</li>
 				<li class="cat_box">
-					<a href="#">
-						<div class="cat_img"><img src="images/img4.jpg"></div>
+					<a href="https://stagingdemoonline.com/smartdailytips/category/food-recipes/">
+						<div class="cat_img"><a href="https://stagingdemoonline.com/smartdailytips/category/food-recipes/"><img src="images/img4.jpg"></a></div>
 						<div class="cat_wrap"><div class="cat_title blue_label">MOMS</div>
 						<div class="cat_desc">Speed Clean</div></div>
 					</a>	
 				</li>
 				<li class="cat_box mg0">
-					<a href="#">
-						<div class="cat_img"><img src="images/img5.jpg"></div>
+					<a href="https://stagingdemoonline.com/smartdailytips/category/love/">
+						<div class="cat_img"><a href="https://stagingdemoonline.com/smartdailytips/category/love/"><img src="images/img5.jpg"></a></div>
 						<div class="cat_wrap"><div class="cat_title red_label">LOVE</div>
 						<div class="cat_desc">Unique Date Ideas</div></div>
 					</a>	

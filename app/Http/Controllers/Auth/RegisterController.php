@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Subscribe;
 
 class RegisterController extends Controller
 {
@@ -65,14 +66,12 @@ class RegisterController extends Controller
             'title_name' => 'required|string|max:255',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'street_add' => 'required',
+            'street_add' => 'required|max:255',
             'apt' => 'required|string|max:255',
             'city' => 'required|string|max:255',
             'state' => 'required|string|max:255',
             'zip' => 'required|string|max:255',
-            'dob_month' => 'required|max:2',
-            'dob_day' => 'required|max:2',
-            'dob_year' => 'required|max:4',
+            'dob_cal' => 'required|max:10',
             'email' => 'required|string|email|max:255|confirmed',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -86,10 +85,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {   
-        $mydob='2018-1-22';
-        $dob = $data['dob_year']."-".$data['dob_month']."-".$data['dob_day'];
-        
+        // $mydob='2018-1-22';
+        // $dob = $data['dob_year']."-".$data['dob_month']."-".$data['dob_day'];
+        $dob=str_replace('/', '-', $data['dob_cal']);
+       if(isset($data['receive_updates'])){
+        if(Subscribe::where('email',$data['email'])->where('subscription_category', '0')->exists() ){
+            // do othing
+         }
+         else{
+              // to subscribe a new user to news letter
+              $newSubscription = new Subscribe;
+              $newSubscription->email = $data['email'];
+              $newSubscription->subscription_category = 0;
+              $newSubscription->save();
+         }
+       }
         if( $data['email'] === $data['email_confirmation'] && $data['password'] === $data['password_confirmation']){
+            
+
             return User::create([
                 'title_name' => $data['title_name'],
                 'first_name' => $data['first_name'],

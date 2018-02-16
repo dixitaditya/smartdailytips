@@ -1,3 +1,4 @@
+<option value="selecte_state" selected>Select State</option>
 <option value="AL">Alabama</option>
 <option value="AK">Alaska</option>
 <option value="AZ">Arizona</option>

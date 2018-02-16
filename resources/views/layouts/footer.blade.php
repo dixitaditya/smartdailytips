@@ -6,10 +6,24 @@
     </div>
 </footer> 
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+
 <script src="js/jquery.bxslider.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <script type="text/javascript">
     $(document).ready(function(){
+        $( function() {
+            $( "#dob_cal" ).datepicker({
+                dateFormat: 'yy/mm/dd',//check change
+                changeMonth: true,
+                changeYear: true
+            });
+          });
         /*for mobile navigation button start*/
         $("#nav-toggle").click(function () {
             if (!($(this).hasClass('active'))) {
@@ -256,30 +270,32 @@
             return false;  
         }
         });
-    
+        $( function() {
+            $( "#datepicker" ).datepicker();
+          } );
 </script>
-<!--[if lte IE8]> 
-<script>
-function getElementsByClassName(node, classname) {
-    var a = [];
-    var re = new RegExp('(^| )'+classname+'( |$)');
-    var els = node.getElementsByTagName("*");
-    for(var i=0,j=els.length; i<j; i++)
-        if(re.test(els[i].className))a.push(els[i]);
-    return a;
-}
-    var tabs = getElementsByClassName(document.body,'quiz_options');
-console.log(tabs.length);
-for(var i=0;i<tabs.length;i++){
-tabs[i].onclick = (function ex(){
-    console.log(i);
-    })();
-}
-    
-</script>
-<script>
+{{--  these validation script were causing dinput double click issue in IE7  --}}
 
-</script>
+<!--[if !IE]><!-->
+    <script src="js/myValidations/signup1.js"></script>
+    <script src="js/myValidations/signin.js"></script>
+    <script src="js/myValidations/subscribe.js"></script>
+    <script src="js/myValidations/multiSubscribe.js"></script>
+<!--<![endif]-->
+
+<!--[if gte IE 8]>
+    <script src="js/myValidations/signup1.js"></script>
+    <script src="js/myValidations/signin.js"></script>
+    <script src="js/myValidations/subscribe.js"></script>
+    <script src="js/myValidations/multiSubscribe.js"></script>
+    
+    
 <![endif]-->
+
+
+{{-- so run in every excpet ie and then run IeE greater than 7  --}}
+
+
+
 </body>
 </html>

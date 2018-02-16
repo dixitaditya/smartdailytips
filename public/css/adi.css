@@ -49,3 +49,86 @@
 .slide1{height: 500px;background:#aaaaaa url('../images/slider.jpg') no-repeat top center;background-size: cover;}
 /* .quiz_box .quiz_form .options label{color: #717679;font-size: 14px;line-height: 21px;padding-left: 35px; word-break: break-all;} */
 /* .quiz_box .quiz_form .options input[type=radio]:not(old) + label{display:inline-block;vertical-align: middle; background:url('../images/rad_unchk.png') no-repeat left center;text-align: left; width: auto;line-height: 23px} */
+
+/*home page search button*/
+.searchBox .button {
+    width: 33px;
+}
+.searchBox {
+    float: right;
+    background: #353b4d;
+    width: 236px;
+    height: 50px;
+}
+.subsmodallogo{
+    width:110px !important;
+    height:auto;
+}
+.quiz_box .correct_box {
+
+    z-index: 0;
+}
+.quiz_box .incorrect_box {
+    
+        z-index: 0;
+    }
+ .quiz_box .sub_title {
+       min-height: 100px;
+    }
+quiz_box .bot_text {
+        margin: 28px 0 45px;
+        min-height: 100px;
+}
+
+.guest_quiz_box .bot_text {
+        margin: 45px 0 45px;
+}
+.guest_quiz_box .sub_title {
+    padding: 0 10px 4px;
+}
+.guest_quiz_box .c_title{
+    color:#00B13F;
+    cursor:pointer;
+}
+.signupform-wrapper{
+    background: url(../images/signupbg.jpg) no-repeat top center;
+}
+.signupform-wrapper{
+    background: url(../images/signupbg.jpg) no-repeat top center;
+}
+@media only screen and (max-width: 767px){
+.signup-fieldset .bginput_email, .signup-fieldset .bginput_password {
+    width: 100%;
+}
+}
+@media only screen and (max-width: 425px){
+.signup-step .numtwo {
+    margin-top: 8px;
+}
+}
+.signup-body .signupform-wrapper{
+    background: url("../images/sweepbg.jpg") no-repeat top center;
+    background-size: cover;
+}
+.error{
+color:red;
+}
+.signInWrap .signCont .inputBox {
+    margin-bottom: 0px;
+}
+.signInWrap .signCont .signInInputPadding{
+    margin-bottom: 20px;
+}
+.subscribeWrap .subspp{
+    margin-top:25px;
+}
+#modalSubsEmail-error{
+    position: absolute;
+    padding: 5px 0px;
+}
+.subsciber_box .email input {
+    margin-bottom:0px;
+}
+.subsciber_box .subscribe input {
+    margin-top:25px;
+}

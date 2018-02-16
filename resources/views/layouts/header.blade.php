@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" alt="" />
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 <link rel="stylesheet" href="css/jquery.bxslider.css">
 <link href="css/style.css" rel="stylesheet" media="all">
@@ -30,10 +31,26 @@
 .subsciber_box .email input{width: 228px;height: 40px;border-radius: 5px;border: solid 1px #6b6b6b;padding: 0 10px;margin: 25px 0 25px;line-height:40px}
 </style>
 <![endif]-->
+
 <!--[if lte IE 8]>    
 <style type="text/css">
     .banner .bx-wrapper .bx-next{border:0}
 .banner .bx-wrapper .bx-prev{border:0}
+.subscribeWrap .inputBox{height:30px;line-height:30px}
+.signInWrap .signCont .inputBox{height:30px;line-height:30px;}
+.signup-fieldset .signup-inputBox{height:20px;line-height:20px}
+</style>
+<![endif]-->
+<!--[if lte IE 7]>    
+{{--  signup form was breaking in IE7  --}}
+<style type="text/css">
+INPUT[type=checkbox].signup-checkbox{display:block;}
+.headerRht{width:220px}
+.signupform-wrapper{background-position: top center;}
+.signup-step, .signup-row{overflow: auto;}
+.signup-row{clear: both;}
+.main-signup-form .signup-form-inner{border:1px solid #e6e6e6}
+.signup-fieldset .bginput_email, .signup-fieldset .bginput_password, .signInWrap .signCont .sEmal, .signInWrap .signCont .sPwd{background:none; padding-left:10x;}
 </style>
 <![endif]-->
 </head>
@@ -48,9 +65,12 @@
             </h1>
             <div class="headerRht adi_headerRht">
                     @if(Auth::check())
-                   <a class="signIn" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                   <a class="signIn" href="javascript:void(0);" onclick="document.getElementById('frm-logout').submit();">
                         Log Out
                     </a>    
+                    {{--  <button class="signIn" onclick="document.getElementById('frm-logout').submit();">
+                        Log Out
+                    </button>   --}}
                     <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                     </form></li>

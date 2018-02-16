@@ -1,4 +1,4 @@
-<div class="quiz_box questions">
+<div class="quiz_box questions guest_quiz_box">
         <div class="title"><span><img src="images/star.png"></span>Daily Quiz</div>
         <div class="content">
             <div class="sub_title">You need to sign in for taking Quiz</div>			
@@ -7,7 +7,7 @@
                         <div class="like"><img src="images/like.png"></div>
                         <div class="correct_box">
                             <div class="c_in">
-                            <div class="c_title">Sign In Buddy</div>
+                            <div class="c_title" onclick="modalOpen('signin')">Sign In</div>
                             <div class="cs_title">and start winning Free Prizes</div>
                             </div>
                         </div>	

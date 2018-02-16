@@ -28,7 +28,7 @@
                     <fieldset class="signup-fieldset w-20">
                         <label for="title_name" class="signup-label">Title</label>
                         <select name="title_name" id="title_name" class="signup-select" value="{{old('title_name')}}"> 
-                            <option value="select" >Select</option>
+                            <option value="title">Title</option>
                             <option value="Mr">Mr</option>
                             <option value="Ms">Ms</option>
                             <option value="Mrs">Mrs</option>
@@ -70,7 +70,7 @@
                         <input type="text" class="signup-inputBox" id="zip" name="zip" value="{{old('zip')}}">
                     </fieldset>
                 </div>
-                <div class="signup-row clearfix">
+                {{--  <div class="signup-row clearfix">
                     <fieldset class="signup-fieldset fieldset33">
                         <label for="dob" class="signup-label">Date of birth</label>
                         <select name="dob_month" id="dob_month" class="signup-select" value="{{old('dob_month')}}">
@@ -92,9 +92,16 @@
                             @include('dataOptions.year')
                         </select>
                     </fieldset>
-                </div>
+                </div>  --}}
+                <div class="signup-row clearfix">
+                        <fieldset class="signup-fieldset fieldset33">
+                            <label for="dob_cal" class="signup-label">Date of birth</label>
+                            <p><input type="text" id="dob_cal" class="signup-inputBox"></p>
+                        </fieldset>
+                        
+                    </div>
                 <div class="signup-step mt40 clearfix">
-                    <p class="step-no yellow">2</p>
+                    <p class="step-no yellow numtwo">2</p>
                     <p class="step-title">Enter your email and passsword to sign up</p>
                 </div>
                 <div class="signup-row clearfix">
