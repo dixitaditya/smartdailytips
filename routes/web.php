@@ -78,6 +78,7 @@ Route::post('/signup','Auth\RegisterController@register')->name('signup');
 
 Route::get('/substest','SubscriptionController@substest')->name('substest');
 Route::post('/postsubstest','SubscriptionController@postsubstest')->name('postsubstest');
+// Route::post('/refregister','Auth\RefRegisterController@registerReferralUser')->name('refregister');
 
 
 Route::get('/incorrect', function () {
@@ -121,6 +122,7 @@ Route::get('/thankyou1', function () {
 Route::get('/signupyellow', function () {
     return view('signupform_ref_yellow');
 });
+
 /*
 |--------------------------------------------------------------------------
 | Test Mail Routes

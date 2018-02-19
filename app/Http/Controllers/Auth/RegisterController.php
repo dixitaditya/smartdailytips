@@ -72,7 +72,7 @@ class RegisterController extends Controller
             'state' => 'required|string|max:255',
             'zip' => 'required|string|max:255',
             'dob_cal' => 'required|max:10',
-            'email' => 'required|string|email|max:255|confirmed',
+            'email' => 'required|unique:users|string|email|max:255|confirmed',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -85,6 +85,9 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {   
+        $ref= request()->headers->get('referer');
+        // $ref="papa";
+        // dd($ref);
         // $mydob='2018-1-22';
         // $dob = $data['dob_year']."-".$data['dob_month']."-".$data['dob_day'];
         $dob=str_replace('/', '-', $data['dob_cal']);
@@ -102,7 +105,7 @@ class RegisterController extends Controller
        }
         if( $data['email'] === $data['email_confirmation'] && $data['password'] === $data['password_confirmation']){
             
-
+            // dd($ref);
             return User::create([
                 'title_name' => $data['title_name'],
                 'first_name' => $data['first_name'],
@@ -114,6 +117,7 @@ class RegisterController extends Controller
                 'zip' => $data['zip'],
                 'date_of_birth' => $dob,
                 'email' => $data['email'],
+                'ref' => $ref,
                 'password' => bcrypt($data['password']),
             ]);
         } 

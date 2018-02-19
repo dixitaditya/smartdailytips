@@ -96,7 +96,7 @@
                 <div class="signup-row clearfix">
                         <fieldset class="signup-fieldset fieldset33">
                             <label for="dob_cal" class="signup-label">Date of birth</label>
-                            <p><input type="text" id="dob_cal" class="signup-inputBox"></p>
+                            <p><input type="text" id="dob_cal" class="signup-inputBox" name="dob_cal"></p>
                         </fieldset>
                         
                     </div>
