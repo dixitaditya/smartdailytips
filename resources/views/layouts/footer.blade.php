@@ -1,7 +1,7 @@
 <footer>
     <div class="footerInn clearfix">
         <div class="footLinks">
-        <a href="#">About Us</a><a href="#">Terms of Service</a><a href="#">Privacy Policy</a>
+        <a href="https://stagingdemoonline.com/smartdailytips/about-us/">About Us</a><a href="https://stagingdemoonline.com/smartdailytips/terms-of-service/">Terms of Service</a><a href="https://stagingdemoonline.com/smartdailytips/privacy-policy/">Privacy Policy</a>
         </div>
     </div>
 </footer> 
@@ -278,8 +278,9 @@
 
 <!--[if !IE]><!-->
     <script src="js/myValidations/signup1.js"></script>
-    <script src="js/myValidations/signin.js"></script>
     <script src="js/myValidations/subscribe.js"></script>
+    <script src="js/myValidations/signin.js"></script>
+    
     <script src="js/myValidations/multiSubscribe.js"></script>
 <!--<![endif]-->
 
