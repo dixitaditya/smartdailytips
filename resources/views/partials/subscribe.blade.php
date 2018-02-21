@@ -27,7 +27,7 @@
             <label for="chk5">Love Tips</label>
         </div>
         <div class="email">
-            <input type="text" placeholder="Enter email address" name="email" id="botSubsEmail">
+            <input type="text" placeholder="Enter email address" name="email" id="botSubsEmail" required="required">
         </div>
         <div class="subscribe">
             {{--  <input type="submit" value="Subscribe" >  --}}
