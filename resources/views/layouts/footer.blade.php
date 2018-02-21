@@ -1,7 +1,7 @@
 <footer>
     <div class="footerInn clearfix">
         <div class="footLinks">
-        <a href="#">About Us</a><a href="#">Terms of Service</a><a href="#">Privacy Policy</a>
+        <a href="https://stagingdemoonline.com/smartdailytips/about-us/">About Us</a><a href="https://stagingdemoonline.com/smartdailytips/terms-of-service/">Terms of Service</a><a href="https://stagingdemoonline.com/smartdailytips/privacy-policy/">Privacy Policy</a>
         </div>
     </div>
 </footer> 
@@ -84,6 +84,7 @@
        //alert(token);
         var url1 = '{{route('substest')}}';
        // alert(url1);
+       if(email1!=""){
         $.ajax({
             type:'POST',
             url:'./subscribeonly',
@@ -100,7 +101,8 @@
                 console.log(data);
             }
          });
-      
+        }
+        else(alert('Enter Valid Email Id To subscribe'));
 
     }
 
@@ -123,8 +125,8 @@
          //alert(tokenBot+ "<br/>"+option1+ "<br/>"+option2+ "<br/>"+option3+ "<br/>"+option4+ "<br/>"+option5);
          var url1 = '{{route('substest')}}';
          //alert(url1);
-         
-         $.ajax({
+         if(emailBot!=""){
+            $.ajax({
              type:'POST',
              url:'./ajaxsubscribewithcategories',
              data:{email: emailBot,
@@ -142,6 +144,9 @@
                  document.getElementById("subs_replace_here").innerHTML=data;
              }
           });
+         }
+         else(alert('Enter Valid Email Id To subscribe'));
+        
        
  
      }
@@ -278,8 +283,9 @@
 
 <!--[if !IE]><!-->
     <script src="js/myValidations/signup1.js"></script>
-    <script src="js/myValidations/signin.js"></script>
     <script src="js/myValidations/subscribe.js"></script>
+    <script src="js/myValidations/signin.js"></script>
+    
     <script src="js/myValidations/multiSubscribe.js"></script>
 <!--<![endif]-->
 
