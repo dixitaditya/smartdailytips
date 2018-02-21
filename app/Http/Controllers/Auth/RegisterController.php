@@ -62,6 +62,7 @@ class RegisterController extends Controller
      
     protected function validator(array $data)
     {   
+        // dd(dob_cal);
         return Validator::make($data, [
             'title_name' => 'required|string|max:255',
             'first_name' => 'required|string|max:255',
@@ -91,6 +92,9 @@ class RegisterController extends Controller
         // $mydob='2018-1-22';
         // $dob = $data['dob_year']."-".$data['dob_month']."-".$data['dob_day'];
         $dob=str_replace('/', '-', $data['dob_cal']);
+        //because of regex i have is working on dd-mm-yy i have to change the date type to 
+        $dob =date('Y-m-d', strtotime($dob));
+        // dd($dob);
        if(isset($data['receive_updates'])){
         if(Subscribe::where('email',$data['email'])->where('subscription_category', '0')->exists() ){
             // do othing

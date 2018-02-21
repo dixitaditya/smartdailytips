@@ -19,7 +19,7 @@
     $(document).ready(function(){
         $( function() {
             $( "#dob_cal" ).datepicker({
-                dateFormat: 'yy/mm/dd',//check change
+                dateFormat: 'dd/mm/yy',//check change
                 changeMonth: true,
                 changeYear: true
             });
@@ -275,9 +275,7 @@
             return false;  
         }
         });
-        $( function() {
-            $( "#datepicker" ).datepicker();
-          } );
+       
 </script>
 {{--  these validation script were causing dinput double click issue in IE7  --}}
 

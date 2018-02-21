@@ -79,7 +79,7 @@ INPUT[type=checkbox].signup-checkbox{display:block;}
                     @include('partials.signinModal')                    
                     @endif
                     @if(Auth::check())
-                    <p class="signIn" style="cursor: help;" title="Howdy {{Auth::user()->first_name}} {{Auth::user()->last_name}}!!  Welcome to 'Your Smart Daily tips' " >Hi {{Auth::user()->first_name}}</p>
+                    <p class="signIn"  title="Howdy {{Auth::user()->first_name}} {{Auth::user()->last_name}}!!  Welcome to 'Your Smart Daily tips' " >Hi {{Auth::user()->first_name}}</p>
                     @else
                     <a href="javascript:void(0);" onclick="modalOpen('subscribe')" class="subscribe">Subscribe</a>
                     @endif

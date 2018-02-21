@@ -126,7 +126,7 @@
                 </div> 
                 <div class="signup-row">
                     <div class="signupCheckbox-wrapper clearfix">
-                        <input id="pp" name="pp" type="checkbox" checked="" class="signup-checkbox">
+                        <input id="pp" name="pp" type="checkbox"  class="signup-checkbox">
                         <label for="pp" class="signupcheck-label">
                             <div class="signinnote">Keep me signed in</div>
                         </label>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="signup-row ">
                     <div class="signupCheckbox-wrapper clearfix">
-                        <input id="receive_updates" name="receive_updates" type="checkbox" checked="" class="signup-checkbox">
+                        <input id="receive_updates" name="receive_updates" type="checkbox" " class="signup-checkbox">
                         <label for="receive_updates" class="signupcheck-label">
                             <div class="signinnote">Yes, I&rsquo;d like to receive Smart Tips &amp; chances to win prizes from SmartDailyTips &amp; SearchSweeps. I know I can unsubscribe at any time by clicking the unsubscribe link in the email.</div>
                         </label>
