@@ -84,6 +84,7 @@
        //alert(token);
         var url1 = '{{route('substest')}}';
        // alert(url1);
+       if(email1!=""){
         $.ajax({
             type:'POST',
             url:'./subscribeonly',
@@ -100,7 +101,8 @@
                 console.log(data);
             }
          });
-      
+        }
+        else(alert('Enter Valid Email Id To subscribe'));
 
     }
 
@@ -123,8 +125,8 @@
          //alert(tokenBot+ "<br/>"+option1+ "<br/>"+option2+ "<br/>"+option3+ "<br/>"+option4+ "<br/>"+option5);
          var url1 = '{{route('substest')}}';
          //alert(url1);
-         
-         $.ajax({
+         if(emailBot!=""){
+            $.ajax({
              type:'POST',
              url:'./ajaxsubscribewithcategories',
              data:{email: emailBot,
@@ -142,6 +144,9 @@
                  document.getElementById("subs_replace_here").innerHTML=data;
              }
           });
+         }
+         else(alert('Enter Valid Email Id To subscribe'));
+        
        
  
      }

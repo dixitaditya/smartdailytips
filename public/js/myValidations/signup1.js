@@ -8,12 +8,22 @@ jQuery(document).ready(function($) {
   jQuery.validator.addMethod("mobilecheck", function(value, element) {
   return this.optional(element) || /^[0-9]\d{2}-\d{3}-\d{4}$/i.test(value);
   }, "Please Enter Valid Phone Number"); 
+  
+  //validate city
+  jQuery.validator.addMethod("citycheck", function(value, element) {
+    return this.optional(element) || /^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$/i.test(value);
+    }, "Please Enter Valid City Name"); 
 
-  // validations for select
- $.validator.addMethod("valueNotEquals", function(value, element, arg){
-  return arg != value;
- }, "Value must not equal arg."); 
+    // validations for select
+  $.validator.addMethod("valueNotEquals", function(value, element, arg){
+    return arg != value;
+  }, "Value must not equal arg."); 
 
+  //validate date
+  jQuery.validator.addMethod("dateValidate", function(value, element) {
+    return this.optional(element) || /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/i.test(value);
+    }, "Please Enter Valid Date"); 
+ 
   jQuery.validator.addMethod("emailcheck", function(value, element) {
   return this.optional(element) || /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i.test(value);
     }, "Please enter valid email");   
@@ -49,7 +59,13 @@ jQuery(document).ready(function($) {
                 },
                 city: {
                   required: true,
+                  citycheck:true,
                   maxlength: 255                         
+                },
+                dob_cal: {
+                  required: true,
+                  dateValidate:true,
+                  maxlength: 10                         
                 },
                 state:{ valueNotEquals: "selecte_state" },
                 zip: {
@@ -90,7 +106,7 @@ jQuery(document).ready(function($) {
           password_confirmation: "Please enter the same password",
           apt: "Please enter your apartment details [max 255 letters]",
           street_add: "Please enter your street address/PO Box [max 255 letters]",
-          city: "Please enter your city",
+          city: "Please enter Valid city name",
           zip: "Please enter your zip [max 10 digit]",
           state: "Please select state / region" ,
           dob_month:"Please select month",  

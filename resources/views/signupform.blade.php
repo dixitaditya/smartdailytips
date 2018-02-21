@@ -173,7 +173,7 @@
                     <input type="submit" name="agree" class="signupbtn" value="Yes, I Agree" />
                 </div>
                 <div class="signup-row clearfix">
-                    <p class="signup-disclaimer">By clicking above, I understand and agree to the <a href="#">Privacy Policy</a> of SmartDailyTips &amp; SearchSweeps</p>
+                    <p class="signup-disclaimer">By clicking above, I understand and agree to the <a href="https://stagingdemoonline.com/smartdailytips/privacy-policy/">Privacy Policy</a> of SmartDailyTips &amp; SearchSweeps</p>
                 </div>
             </form>
         </div>

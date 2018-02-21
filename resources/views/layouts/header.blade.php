@@ -65,8 +65,8 @@ INPUT[type=checkbox].signup-checkbox{display:block;}
             </h1>
             <div class="headerRht adi_headerRht">
                     @if(Auth::check())
-                   <a class="signIn" href="javascript:void(0);" onclick="document.getElementById('frm-logout').submit();">
-                        Log Out
+            <a class="signIn" href="javascript:void(0);" onclick="document.getElementById('frm-logout').submit();" title="click to Logout from {{Auth::user()->email}}">
+                        Log Out 
                     </a>    
                     {{--  <button class="signIn" onclick="document.getElementById('frm-logout').submit();">
                         Log Out
@@ -78,8 +78,11 @@ INPUT[type=checkbox].signup-checkbox{display:block;}
                     <a href="javascript:void(0);" onclick="modalOpen('signin')" class="signIn">Sign In</a>
                     @include('partials.signinModal')                    
                     @endif
-                
+                    @if(Auth::check())
+                    <p class="signIn" style="cursor: help;" title="Howdy {{Auth::user()->first_name}} {{Auth::user()->last_name}}!!  Welcome to 'Your Smart Daily tips' " >Hi {{Auth::user()->first_name}}</p>
+                    @else
                     <a href="javascript:void(0);" onclick="modalOpen('subscribe')" class="subscribe">Subscribe</a>
+                    @endif
                     @include('partials.subscribeModal') 
             </div>
         </div>
