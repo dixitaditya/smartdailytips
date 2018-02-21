@@ -89,6 +89,12 @@ quiz_box .bot_text {
 .guest_quiz_box .c_title{
     color:#00B13F;
     cursor:pointer;
+    width:55px;
+    margin: 0 auto;
+}
+.guest_quiz_box .c_title:hover{
+    color:rgb(31, 219, 91);
+ 
 }
 .signupform-wrapper{
     background: url(../images/signupbg.jpg) no-repeat top center;
