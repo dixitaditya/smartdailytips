@@ -143,12 +143,12 @@
                 <div class="signup-row clearfix">
                     <fieldset class="signup-fieldset fieldset33">
                         <label for="password" class="signup-label">Password</label>
-                        <input type="text" class="signup-inputBox bginput_password" id="password" name="password">
+                        <input type="password" class="signup-inputBox bginput_password" id="password" name="password">
                         <div class=" messages"></div>
                     </fieldset>
                     <fieldset class="signup-fieldset fieldset33 mg-right-0">
                         <label for="confirm_password" class="signup-label">Confirm Password</label>
-                        <input type="text" class="signup-inputBox bginput_password" id="confirm_password" name="password_confirmation">
+                        <input type="password" class="signup-inputBox bginput_password" id="confirm_password" name="password_confirmation">
                         <div class=" messages"></div>
                     </fieldset>
                 </div> 
