@@ -6,7 +6,7 @@
               <div class="closebtnWrap">
                   <a href="javascript:void(0);" data-dissmiss="modal" onclick="modalClose('subscribe')"><img src="images/closebtn.png"/></a>
               </div>
-              <div class="subsHead"><div class="subsLogo"><img src="https://stagingdemoonline.com/smartdailytips/wp-content/themes/smartdailytip/images/logo.png" class="subsmodallogo"></div></div>
+            <div class="subsHead"><div class="subsLogo"><img src="{{ asset('/images/logosmartdailytips.png') }}" class="subsmodallogo"></div></div>
               <div class="subsBtnHead1"><img src="images/subsarrow1.png"></div>
               {{--  <form method="POST" action="{{ route('subscribeonly') }}">  --}}
                 <form name="subscriptionModal" method="POST">

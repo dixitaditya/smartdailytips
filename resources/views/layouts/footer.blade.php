@@ -64,17 +64,27 @@
     });
     function modalOpen(event) {        
         var modal = document.getElementById(event);
-        modal.style.display = "block";
+        var body = document.getElementById('body');
+        modal.style.display = "block"; //ios bug fix
+        body.style.position ="fixed"; //ios bug fix
+        body.style.overflow="hidden"; //ios bug fix
         window.onclick = function(event) {            
             if (event.target == modal) {
+                //when even is still modal but "X" is clicked
                 modal.style.display = "none";
+                body.style.position ="static"; //ios curosr bug fix
+                body.style.overflow="auto"; //ios curosr bug fix
+               
             }
           }
         }
 
     function modalClose(event) {
         var modal = document.getElementById(event);
+        var body = document.getElementById('body');
         modal.style.display = "none";
+        body.style.position ="static"; //ios curosr bug fix
+        body.style.overflow="auto"; //ios curosr bug fix
     }
 
     function sendSubscriptionRequest(){

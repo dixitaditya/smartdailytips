@@ -122,7 +122,7 @@ quiz_box .bot_text {
     margin-top: 8px;
 }
 }
-.signup-body .signupform-wrapper{
+.signup-body .sweep-wrapper{
     background: url("../images/sweepbg.jpg") no-repeat top center;
     background-size: cover;
 }
@@ -148,3 +148,22 @@ color:red;
 .subsciber_box .subscribe input {
     margin-top:25px;
 }
+/* #subs_modal_wrapper .inputBox{
+    -webkit-appearance: none;
+} */
+#menu_overlay {background: #000 none repeat scroll 0 0;  height: 100%; left: 0; opacity: 0.5; position: fixed; top: 0; width: 100%; 
+    z-index: 100;}
+    .menu_overlay {display: none;}
+    .mobNav{
+        z-index: 101  }
+
+        @media only screen and (max-width: 850px){
+        #nav-toggle {
+            display: block;
+            cursor: pointer;
+            z-index: 102;
+        }
+       
+    }
+    
+    

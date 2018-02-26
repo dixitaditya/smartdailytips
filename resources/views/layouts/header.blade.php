@@ -54,13 +54,15 @@ INPUT[type=checkbox].signup-checkbox{display:block;}
 </style>
 <![endif]-->
 </head>
-<body> 
+<body id="body"> 
+        {{--  #menu_overlay {background: #000 none repeat scroll 0 0;  height: 100%; left: 0; opacity: 0.5; position: fixed; top: 0; width: 100%;   --}}
+<div id="menu_overlay" class="menu_overlay"></div>            
 <header>
         <div class="headerTop clearfix">
             <h1 class="logo">
                 <a href="{{ route('home') }}" title="mensLifestyle.com">
                     {{--  <img class="logo" src="{{ asset('/images/logo.jpg') }}" alt="smartdailytips.com"/>  --}}
-                    <img class="logo" src="https://stagingdemoonline.com/smartdailytips/wp-content/themes/smartdailytip/images/logo.png" alt="smartdailytips.com"/>
+                    <img class="logo" src="{{ asset('/images/logosmartdailytips.png') }}" alt="smartdailytips.com"/>
                 </a>
             </h1>
             <div class="headerRht adi_headerRht">
