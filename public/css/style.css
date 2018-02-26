@@ -95,6 +95,7 @@ padding: 0 40px; transition-duration: 1s; transition-timing-function: linear; di
 .mobNav a:hover {color: #e23f04;}
 #menu_overlay {background: #000 none repeat scroll 0 0;  height: 100%; left: 0; opacity: 0.5; position: fixed; top: 0; width: 100%; 
   z-index: 0;}
+
 .mobNav {display: none;}
 .ovrblockWrap{display:none}
 .ovrblock{display:none}
