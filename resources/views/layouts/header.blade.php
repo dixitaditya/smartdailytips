@@ -106,11 +106,11 @@ INPUT[type=checkbox].signup-checkbox{display:block;}
                         <input type="text" name="text" class="search" placeholder="Search" />
                         <input type="submit" name="submit" value="" class="button" />
                     </li>
-                    <li><a href="index.html" title="Diet & Fitness" class="active">Diet &amp; Fitness</a></li>
-                    <li><a href="#" title="Food & Recipes">Food &amp; Recipes</a></li>
-                    <li><a href="#" title="Style & Beauty">Style &amp; Beauty</a></li>
-                    <li><a href="#" title="Moms">Moms</a></li>
-                    <li><a href="#" title="Love">Love</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/diet-fitness/" title="Diet & Fitness" class="active">Diet &amp; Fitness</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/food-recipes/" title="Food & Recipes">Food &amp; Recipes</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/style-beauty/" title="Style & Beauty">Style &amp; Beauty</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/moms/" title="Moms">Moms</a></li>
+                    <li><a href="https://stagingdemoonline.com/smartdailytips/category/love/" title="Love">Love</a></li>
                 </ul>
                 <div class="searchBox clearfix">
                     <input type="text" name="text" class="search" placeholder="Search" />
