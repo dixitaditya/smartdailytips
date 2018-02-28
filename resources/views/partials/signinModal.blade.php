@@ -19,11 +19,11 @@
                 @endif    
             <div class="signInInputPadding">
                 <!--[if lte IE 7]> <label for="email">Enter Email</label>  <![endif]-->
-            <input type="text" name="email" placeholder="Email" class="inputBox sEmal" value="{{ old('email') }}"/>
+            <input type="text" name="email" placeholder="Email" class="inputBox sEmal" value="{{ old('email') }}" id="signinmodalemail"/>
             </div>
             <div class="signInInputPadding">
                 <!--[if lte IE 7]> <label for="password">Enter Password</label>  <![endif]-->
-            <input type="password" name="password" placeholder="Password" class="inputBox sPwd" />
+            <input type="password" name="password" placeholder="Password" class="inputBox sPwd" id="signinmodalpwd"/>
             </div>
             {{--  @if ($errors->has('password'))
             <span class="help-block">

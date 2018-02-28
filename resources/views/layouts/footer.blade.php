@@ -285,7 +285,30 @@
             return false;  
         }
         });
-       
+
+        /*
+        |--------------------------------------------------------------------------
+        | dont use add event listener the enter key ajax won't work
+        | rather use keypress or keyup - Priyanka
+        |--------------------------------------------------------------------------
+        |
+        | Test routes delete in production
+        | keyup not working
+        |
+        */
+
+        $('#modalSubsEmail').click(function(){
+        $('#modalSubsEmail').focus();
+        });
+
+        $('#signinmodalemail').click(function(){
+        $('#signinmodalemail').focus();
+        });
+
+        $('#signinmodalpwd').click(function(){
+        $('#signinmodalpwd').focus();
+        });
+
 </script>
 {{--  these validation script were causing dinput double click issue in IE7  --}}
 

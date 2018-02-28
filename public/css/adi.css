@@ -166,4 +166,6 @@ color:red;
        
     }
     
-    
+    #subs_bot_submit{
+        -webkit-appearance: none;
+    }
