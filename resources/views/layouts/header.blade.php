@@ -11,9 +11,10 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-<link rel="stylesheet" href="css/jquery.bxslider.css">
-<link href="css/style.css" rel="stylesheet" media="all">
-<link href="css/adi.css" rel="stylesheet" media="all">
+{{--  <link rel="stylesheet" href="css/jquery.bxslider.css">  --}}
+{{--  <link href="css/style.css" rel="stylesheet" media="all">  --}}
+{{--  <link href="css/adi.css" rel="stylesheet" media="all">  --}}
+<link href="css/full.css" rel="stylesheet" media="all">
 
 <!--[if lte IE 9]>
 <script type="text/javascript">
