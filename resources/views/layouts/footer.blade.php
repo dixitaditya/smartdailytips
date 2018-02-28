@@ -13,7 +13,7 @@
 
 <script src="js/jquery.bxslider.min.js"></script>
 
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+{{--  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  --}}
 
 <script type="text/javascript">
     $(document).ready(function(){
@@ -313,19 +313,20 @@
 {{--  these validation script were causing dinput double click issue in IE7  --}}
 
 <!--[if !IE]><!-->
-    <script src="js/myValidations/signup1.js"></script>
+    {{--  <script src="js/myValidations/signup1.js"></script>
     <script src="js/myValidations/subscribe.js"></script>
     <script src="js/myValidations/signin.js"></script>
     
-    <script src="js/myValidations/multiSubscribe.js"></script>
+    <script src="js/myValidations/multiSubscribe.js"></script>  --}}
+    <script src="js/myValidations/totalValidation.js"></script>
 <!--<![endif]-->
 
 <!--[if gte IE 8]>
-    <script src="js/myValidations/signup1.js"></script>
+    {{--  <script src="js/myValidations/signup1.js"></script>
     <script src="js/myValidations/signin.js"></script>
     <script src="js/myValidations/subscribe.js"></script>
-    <script src="js/myValidations/multiSubscribe.js"></script>
-    
+    <script src="js/myValidations/multiSubscribe.js"></script>  --}}
+      <script src="js/myValidations/totalValidation.js"></script>
     
 <![endif]-->
 
