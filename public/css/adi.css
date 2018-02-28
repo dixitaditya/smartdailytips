@@ -110,6 +110,9 @@ quiz_box .bot_text {
     position: absolute;
     padding:  0px 0px !important;
 }
+.quiz_box .sub_title {
+    min-height: 30px;
+}
 }
 @media only screen and (max-width: 500px){
 .adi_headerRht {
