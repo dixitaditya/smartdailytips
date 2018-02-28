@@ -22,7 +22,7 @@
                     </form>
                 </div>	
                 <div class="card">
-                    <a href="" title="click here"><img src="images/card.jpg"></a>
+                    <a href="#" title="click here"><img src="images/card.jpg"></a>
                 </div>
             </div>
     </div>	
